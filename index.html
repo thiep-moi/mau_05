@@ -1,0 +1,3216 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#f8f5f2">
+    <title>Thiệp mời cưới | Đơn Dương & Hồng Ánh</title>
+    <meta name="description"
+        content="Trân trọng kính mời quý khách đến chung vui trong ngày trọng đại của Đơn Dương & Hồng Ánh. Sự hiện diện của quý vị là niềm vinh hạnh cho gia đình chúng tôi.">
+    <meta name="author" content="Đơn Dương & Hồng Ánh">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="anh.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="anh.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:title" content="Lễ Thành Hôn | Đơn Dương & Hồng Ánh">
+    <meta property="og:description"
+        content="Trân trọng kính mời quý khách đến chung vui trong ngày trọng đại của chúng tôi.">
+
+    <meta property="og:image" content="https://donduong-honganh.github.io/anh.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Thiệp mời cưới Đơn Dương và Hồng Ánh">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lễ Thành Hôn | Đơn Dương & Hồng Ánh">
+    <meta name="twitter:description"
+        content="Trân trọng kính mời quý khách đến dự bữa cơm thân mật cùng gia đình chúng tôi.">
+    <meta name="twitter:image" content="https://donduong-honganh.github.io/anh.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Ephesis&family=Be+Vietnam+Pro:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        /* --- ĐỊNH CHUẨN THIẾT KẾ LUXURY EDITORIAL DYNAMIC --- */
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.5);
+            --glass-border: rgba(255, 255, 255, 0.85);
+            --glass-shadow: 0 20px 50px rgba(230, 168, 182, 0.25);
+            --text-dark: #634346;
+            --text-muted: #9e7f83;
+            --accent-gold: #d8969e;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Be Vietnam Pro', sans-serif;
+            --font-script: 'Ephesis', cursive;
+            --radius-lg: 32px;
+            --radius-md: 24px;
+            --ease-masterpiece: cubic-bezier(0.85, 0, 0.15, 1);
+            --ease-fluid: cubic-bezier(0.23, 1, 0.32, 1);
+            --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* =========================================
+   1. HỆ SINH THÁI NỀN ULTRA-LUXURY
+========================================= */
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+            /* Cắt đứt mọi thứ tràn ra ngoài */
+            overscroll-behavior-x: none;
+            /* Khóa chết hiệu ứng nảy mép màn hình của iOS */
+        }
+
+        body {
+            background-color: #fdfafb;
+            background-image: url('nen.png');
+            background-repeat: repeat;
+            background-size: 350px;
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            min-height: 100dvh;
+            position: relative;
+        }
+
+        /* =========================================
+           1. ENGINE HÀO QUANG NGỌC TRAI (GENTLE GLOW CANVAS)
+           ========================================= */
+        #glowCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100dvh;
+            z-index: -2;
+            /* Nằm ngay trên lớp Lụa nhưng dưới lớp Kính của nội dung */
+            pointer-events: none;
+            /* Lệnh ma thuật biến các bong bóng thành luồng sáng lỏng (Aurora) */
+            filter: blur(40px) contrast(1.1);
+            transform: scale(1.2);
+            /* Phóng to nhẹ để khi blur không bị viền đen ở mép */
+            opacity: 0.8;
+        }
+
+        /* =========================================
+   2. MÀN CHÀO SÂN ĐỂ ĐỜI: THE CELESTIAL ALIGNMENT
+========================================= */
+        #masterpiece-intro {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            perspective: 1000px;
+            transition: visibility 3.5s;
+        }
+
+        /* --- LỚP MÀN ĐIỆN ẢNH VIP (THE CINEMATIC WHISPER) --- */
+        .cinematic-whisper {
+            position: absolute;
+            inset: 0;
+            z-index: 50;
+            /* Nằm đè lên trên cụm nhẫn */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+            /* Đồng bộ nền trắng tinh khiết của màn Intro */
+            transition: opacity 1.5s cubic-bezier(0.85, 0, 0.15, 1);
+        }
+
+        .whisper-prefix {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.5s ease 0.5s, transform 1.5s cubic-bezier(0.85, 0, 0.15, 1) 0.5s;
+        }
+
+        .whisper-name {
+            font-family: var(--font-script);
+
+            /* 1. Tinh chỉnh lại tỷ lệ: Giảm nhẹ base size để nhường không gian cho câu dài */
+            font-size: clamp(2.8rem, 8.5vw, 4.5rem);
+
+            color: var(--text-dark);
+
+            /* 2. BA LỆNH SỐNG CÒN ĐỂ THIẾT QUÂN LUẬT KHỐI CHỮ DÀI */
+            text-align: center;
+            /* Ép mọi câu dài khi rớt dòng đều phải tự động căn giữa tuyệt đối */
+            line-height: 1.35;
+            /* Cấp không gian thở, chống đâm nét chữ giữa dòng trên và dòng dưới */
+            padding: 0 1.5rem;
+            /* Vùng đệm an toàn: Không bao giờ cho phép chữ chạm sát mép điện thoại */
+
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            transition: opacity 1.5s ease 1s, transform 1.5s cubic-bezier(0.85, 0, 0.15, 1) 1s;
+        }
+
+        .cinematic-whisper.show .whisper-prefix {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cinematic-whisper.show .whisper-name {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .homage-text-box {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.95);
+            filter: blur(10px);
+            transition: opacity 2.5s ease, transform 2.5s ease, filter 2.5s ease;
+            pointer-events: none;
+        }
+
+        .homage-pre {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+        }
+
+        .homage-name {
+            font-family: var(--font-serif);
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            letter-spacing: 2px;
+            margin: 0.5rem 0;
+            line-height: 1.2;
+        }
+
+        .homage-amp {
+            font-family: var(--font-script);
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            display: block;
+            margin: -0.2rem 0;
+        }
+
+        /* =========================================
+   [ĐỘNG CƠ INTRO V2-FIX] ĐỒNG BỘ KÍCH HOẠT ĐA TẦNG (CẬP NHẬT)
+   ========================================= */
+
+        /* =========================================
+   1. KHÓI CHẺ ĐÔI: KHÓA TRỤC CHỐNG CHỤM 
+   ========================================= */
+        .intro-smoke-curtain {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120vw;
+            height: 120vh;
+            max-width: none;
+            object-fit: cover;
+            z-index: 5;
+            opacity: 1;
+            mix-blend-mode: normal;
+            transition: transform 3s cubic-bezier(0.85, 0, 0.15, 1), opacity 2.5s ease;
+            pointer-events: none;
+        }
+
+        /* THUẬT TOÁN ĐÓNG ĐINH: Giữ nguyên Scale là 1.5 ngay từ đầu, lật ngược khói phải để khớp mí */
+        .smoke-left {
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+
+        .smoke-right {
+            transform: translate(-50%, -50%) scale(1.5) scaleX(-1);
+        }
+
+        /* KHI CHẺ: Chỉ thay đổi trục ngang (X), tuyệt đối không đổi Scale để triệt tiêu hiệu ứng "chụm" */
+        #masterpiece-intro.awake-smoke-split .smoke-left {
+            transform: translate(-150%, -50%) scale(1.5) rotate(-15deg);
+            opacity: 0;
+        }
+
+        #masterpiece-intro.awake-smoke-split .smoke-right {
+            transform: translate(50%, -50%) scale(1.5) scaleX(-1) rotate(-15deg);
+            opacity: 0;
+        }
+
+        /* 2. VÒNG HOA XOAY: Khóa trục tại chỗ */
+        .intro-halo-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.5);
+            width: 380px;
+            height: 380px;
+            z-index: 6;
+            opacity: 0;
+            transition: opacity 2.5s ease, transform 3s var(--ease-masterpiece);
+            pointer-events: none;
+        }
+
+        @keyframes spinInPlace {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .intro-floral-halo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            animation: spinInPlace 25s linear infinite;
+        }
+
+        #masterpiece-intro.awake-halo .intro-halo-wrapper {
+            opacity: 0.6;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* 3. TÊN DÂU RỂ (MA PHỤC) */
+        .homage-text-box {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.95);
+            filter: blur(10px);
+            pointer-events: none;
+            transition: opacity 1.5s ease, transform 2s var(--ease-masterpiece), filter 1.5s ease;
+        }
+
+        #masterpiece-intro.awake-text .homage-text-box {
+            opacity: 1;
+            transform: scale(1);
+            filter: blur(0);
+        }
+
+        /* =========================================
+   4. CƠN SÓNG KHÓI QUÉT: ĐÁNH CHÌM XUỐNG ĐÁY VỰC
+   ========================================= */
+        .intro-smoke-sweep {
+            position: absolute;
+            left: 50%;
+            top: 130vh;
+            /* THUẬT TOÁN SINH TỬ: Đày nó xuống 130% màn hình, bất chấp scale cũng không thể lòi lên được! */
+            width: 150vw;
+            height: 150vh;
+            max-width: none;
+            object-fit: cover;
+            transform: translateX(-50%) scale(1.2);
+            z-index: 99;
+            opacity: 1;
+            mix-blend-mode: normal;
+            pointer-events: none;
+        }
+
+        /* 5. LỆNH TỬ HÌNH: KHI BẤM NÚT MỞ THIỆP */
+        #masterpiece-intro.aligned {
+            background: transparent !important;
+            transition: background 0.1s;
+        }
+
+        /* KHI QUÉT: Lướt êm ái từ cõi âm lên đỉnh trời */
+        #masterpiece-intro.intro-sweeping .intro-smoke-sweep {
+            transform: translate(-50%, -200vh) scale(1.5);
+            opacity: 0;
+            transition: transform 3.5s cubic-bezier(0.23, 1, 0.32, 1), opacity 3s ease;
+        }
+
+        /* SỬA LỖI TÊN BAY LỆCH GÓC: Loại bỏ lệnh dịch ngang (-50%) */
+        #masterpiece-intro.intro-sweeping .homage-text-box {
+            opacity: 0;
+            transform: translateY(-150px) scale(0.8);
+            /* Thuật toán sinh tử: Chỉ bay thẳng lên trên, cấm bay sang ngang */
+            filter: blur(5px);
+            transition: all 1.5s var(--ease-masterpiece);
+        }
+
+        /* Vòng hoa bay thẳng lên trên theo chữ */
+        #masterpiece-intro.intro-sweeping .intro-halo-wrapper {
+            opacity: 0;
+            transform: translate(-50%, -200px) scale(0.8);
+            /* Vòng hoa dùng thẻ absolute nên phải giữ tọa độ -50% để kìm nó ở giữa */
+            filter: blur(5px);
+            transition: all 1.5s var(--ease-masterpiece);
+        }
+
+        /* --- KIẾN TRÚC NÚT BẤM MỞ THIỆP --- */
+        .intro-action-hint {
+            position: absolute;
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--text-dark);
+            opacity: 0;
+            cursor: pointer;
+            /* Trì hoãn 2.5s để tên Dâu Rể hiện lên trọn vẹn rồi nút này mới từ từ hiện ra */
+            transition: opacity 1.5s ease 2.5s;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        /* ẢO THUẬT: Đợi Khói chẻ đôi và Tên hiện ra thì Nút Bấm mới trồi lên thở */
+        #masterpiece-intro.awake-text .intro-action-hint {
+            opacity: 0.8;
+            pointer-events: auto;
+            animation: pulseHint 2.5s infinite alternate ease-in-out;
+        }
+
+        /* CHÉM GIẾT: Khi cơn sóng khói quét lên, Nút Bấm phải bị nuốt chửng ngay lập tức */
+        #masterpiece-intro.intro-sweeping .intro-action-hint {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+            animation: none;
+        }
+
+        @keyframes pulseHint {
+            0% {
+                transform: translateX(-50%) scale(1);
+                opacity: 0.4;
+            }
+
+            100% {
+                transform: translateX(-50%) scale(1.05);
+                opacity: 0.9;
+            }
+        }
+
+        /* =========================================
+           3. HỆ THỐNG HIỆU ỨNG DYNAMIC REVEAL 
+           ========================================= */
+        .reveal-card-3d {
+            opacity: 0;
+            transform: translate3d(0, 50px, 0) rotateX(6deg) scale(0.98);
+            transform-origin: top center;
+            transition: opacity 1.4s var(--ease-fluid), transform 1.4s var(--ease-fluid);
+            position: relative;
+            z-index: 10;
+            will-change: transform, opacity;
+        }
+
+        /* Trạng thái xuất phát từ bên TRÁI */
+        .reveal-card-3d.from-left {
+            transform: translate3d(-60px, 0, 0) rotateY(8deg) scale(0.98);
+        }
+
+        /* Trạng thái xuất phát từ bên PHẢI */
+        .reveal-card-3d.from-right {
+            transform: translate3d(60px, 0, 0) rotateY(-8deg) scale(0.98);
+        }
+
+        /* Đảm bảo khi kích hoạt (active), mọi hướng đều tụ hội về chuẩn tỷ lệ 1:1 */
+        .reveal-card-3d.active,
+        .reveal-card-3d.from-left.active,
+        .reveal-card-3d.from-right.active {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) scale(1);
+        }
+
+        .line-mask {
+            overflow: hidden;
+            display: block;
+            position: relative;
+        }
+
+        .animate-text-up {
+            display: inline-block;
+            transform: translate3d(0, 105%, 0);
+            transition: transform 1.4s var(--ease-fluid);
+            will-change: transform;
+        }
+
+        body.activated .hero .animate-text-up,
+        .active .animate-text-up {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .stagger-1 {
+            transition-delay: 0.2s !important;
+        }
+
+        .stagger-2 {
+            transition-delay: 0.4s !important;
+        }
+
+        .stagger-3 {
+            transition-delay: 0.6s !important;
+        }
+
+        /* =========================================
+   4. HERO SECTION: CINEMATIC FULL-BLEED (V2.0)
+   ========================================= */
+        .cinematic-hero {
+            position: relative;
+            width: 100vw;
+            height: 100dvh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            /* Ép lực hấp dẫn kéo toàn bộ Text xuống đáy */
+            align-items: center;
+            padding-bottom: 10vh;
+            /* Tạo khoảng thở với mép dưới màn hình */
+            z-index: 10;
+        }
+
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            z-index: -2;
+            transform: scale(1.05);
+            /* Chỉ zoom nhẹ để ảnh không bị giật, không làm mờ */
+            transition: transform 2s var(--ease-masterpiece);
+            /* Hủy delay, ảnh sắc nét ngay lập tức */
+            will-change: transform;
+        }
+
+        body.activated .hero-bg-image {
+            transform: scale(1);
+        }
+
+        /* LƯỚI SƯƠNG MÙ BẢO VỆ TYPOGRAPHY */
+        .hero-overlay-gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            /* Phủ đen mờ 50% từ dưới lên */
+            background: linear-gradient(to top, rgba(15, 10, 10, 0.75) 0%, rgba(15, 10, 10, 0.3) 50%, transparent 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 2s ease 1s;
+        }
+
+        body.activated .hero-overlay-gradient {
+            opacity: 1;
+        }
+
+        .hero-bottom-text {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* THUẬT TOÁN TYPOGRAPHY CHUẨN ẢNH MẪU */
+        .script-save-date {
+            font-family: var(--font-script);
+            font-size: clamp(4rem, 10vw, 5.5rem);
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            font-weight: 400;
+            padding: 0 0.3em;
+            /* THUẬT TOÁN TỬ HUYỆT: Nới lỏng lồng kính sang 2 bên để đuôi chữ không bị máy chém line-mask cắt đứt */
+        }
+
+        .modern-couple-name {
+            font-family: var(--font-serif);
+            font-size: clamp(1rem, 4.5vw, 1.5rem);
+            /* Giảm size đi một xíu để nhường chỗ */
+            font-weight: 500;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            /* Ép khoảng cách chữ gần lại */
+            margin-bottom: 0.8rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+            white-space: nowrap;
+            /* LỆNH SINH TỬ: Cấm tuyệt đối việc rớt dòng, ép phải đứng chung một hàng! */
+        }
+
+        .modern-date {
+            font-family: var(--font-sans);
+            font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+            font-weight: 500;
+            color: #ffffff;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        /* =========================================
+           5. CHI TIẾT CẤU TRÚC PHÒNG TRIỂN LÃM
+           ========================================= */
+        .content-section {
+            padding: 3rem 1.5rem 6rem 1.5rem;
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 5;
+        }
+
+        .quote-text {
+            position: relative;
+            /* Bắt buộc phải có để làm mốc tọa độ cho 2 đường gạch */
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 5rem;
+            padding: 2.5rem 1rem;
+            /* Mở rộng padding trên dưới để tạo không gian thở */
+            letter-spacing: 0.5px;
+        }
+
+        /* =========================================
+   KIẾN TRÚC POLAROID V-ANCHOR
+   ========================================= */
+        .polaroid-collision-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+
+        .polaroid-v-anchor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 480px;
+            margin-bottom: 3rem;
+        }
+
+        .polaroid-card {
+            width: 320px;
+            background: #ffffff;
+            padding: 15px 15px 50px 15px;
+            /* Đáy dày chuẩn Polaroid chân thực */
+            box-shadow: 0 25px 50px rgba(230, 168, 182, 0.4);
+            /* Bóng đổ ám hồng rực rỡ */
+            border-radius: 4px;
+            position: absolute;
+            transition: transform 0.6s var(--ease-masterpiece), z-index 0s, box-shadow 0.6s ease;
+            will-change: transform, z-index;
+        }
+
+        .polaroid-img {
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        /* =========================================
+   ẢO THUẬT VẬT LÝ: HAI LINH HỒN VA CHẠM (FLY-IN COLLISION)
+   ========================================= */
+        /* 1. Trạng thái mai phục (Chưa cuộn tới): Bị văng ra xa tít mù tắp ngoài rìa màn hình */
+        .polaroid-collision-section .groom-card {
+            transform: translateX(-150%) rotate(-30deg) scale(0.8);
+            opacity: 0;
+            z-index: 2;
+            transition: transform 1.5s var(--ease-masterpiece), opacity 1.5s ease;
+        }
+
+        .polaroid-collision-section .bride-card {
+            transform: translateX(150%) rotate(30deg) scale(0.8);
+            opacity: 0;
+            z-index: 3;
+            transition: transform 1.5s var(--ease-masterpiece) 0.2s, opacity 1.5s ease 0.2s;
+            /* Trễ một nhịp để Cô Dâu bay vào sau tạo kịch tính */
+        }
+
+        /* 2. Trạng thái bùng nổ (Khi lướt tới): Khóa mục tiêu, đập mạnh vào vị trí chữ V */
+        .polaroid-collision-section.active .groom-card {
+            transform: translateX(-60%) rotate(-10deg) scale(1);
+            opacity: 1;
+        }
+
+        .polaroid-collision-section.active .bride-card {
+            transform: translateX(60%) rotate(10deg) scale(1);
+            opacity: 1;
+        }
+
+        /* 3. Trạng thái tương tác vật lý (Khi khách bấm vào lúc ảnh đã yên vị) */
+        .polaroid-card.is-focused {
+            z-index: 10;
+            box-shadow: 0 35px 70px rgba(230, 168, 182, 0.8);
+        }
+
+        .polaroid-collision-section.active .groom-card.is-focused {
+            transform: translateX(-60%) scale(1.05) rotate(0deg) !important;
+        }
+
+        .polaroid-collision-section.active .bride-card.is-focused {
+            transform: translateX(60%) scale(1.05) rotate(0deg) !important;
+        }
+
+        /* Kiến trúc bao bọc Text được tái thiết lập để chứa 2 cực */
+        .polaroid-titles {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .polaroid-names-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* Thuật toán tử huyệt: Đẩy 2 tên xé ra 2 mép */
+            width: 100%;
+            max-width: 600px;
+            /* Khóa khoảng cách an toàn khớp với ảnh Desktop */
+            padding: 0 1rem;
+        }
+
+        .polaroid-titles .polaroid-name {
+            font-family: var(--font-script);
+            font-size: clamp(3.5rem, 8vw, 4.5rem);
+            color: var(--text-dark);
+            line-height: 1;
+            font-weight: 400;
+            padding: 0.1em 0.3em;
+            /* Mở rộng không gian an toàn cả 4 chiều để bảo vệ các nét vút cao và đuôi dài của font Ephesis */
+        }
+
+        /* Lời mời trang trọng */
+        .invitation-statement {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            line-height: 1.5;
+            color: var(--text-dark);
+            margin: 6rem 0;
+            position: relative;
+        }
+
+        .invitation-statement::before,
+        .invitation-statement::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: var(--accent-gold);
+            margin: 1.5rem auto;
+        }
+
+        .invitation-statement span {
+            font-family: var(--font-script);
+            font-size: 2.8rem;
+            color: var(--accent-gold);
+            padding: 0 10px;
+        }
+
+        /* 3 Ảnh đan xen */
+        .trio-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 7rem;
+            align-items: center;
+        }
+
+        .trio-item {
+            aspect-ratio: 3/4;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--glass-shadow);
+            clip-path: inset(10% 10% 10% 10% round 16px);
+            -webkit-clip-path: inset(10% 10% 10% 10% round 16px);
+            transition: clip-path 1.5s var(--ease-masterpiece), -webkit-clip-path 1.5s var(--ease-masterpiece);
+        }
+
+        .trio-item:nth-child(2) {
+            transform: translateY(40px) scale(1.05);
+            aspect-ratio: 4/5;
+        }
+
+        .trio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.2);
+            transition: transform 2s var(--ease-fluid);
+        }
+
+        .reveal-card-3d.active .trio-item {
+            clip-path: inset(0% 0% 0% 0% round 16px);
+            -webkit-clip-path: inset(0% 0% 0% 0% round 16px);
+        }
+
+        .reveal-card-3d.active .trio-item img {
+            transform: scale(1);
+        }
+
+        /* Lõi tái sử dụng cho tiêu đề các thẻ Kính */
+        .card-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-style: italic;
+            font-weight: 500;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        /* =========================================
+   6. KIẾN TRÚC GIA ĐÌNH: MÔN ĐĂNG HỘ ĐỐI
+   ========================================= */
+        .family-unity-split {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            position: relative;
+        }
+
+        .family-col {
+            flex: 1;
+            text-align: center;
+            padding: 0 0.5rem;
+        }
+
+        /* Thanh gươm chia đôi ranh giới */
+        .family-divider {
+            width: 1px;
+            background: rgba(99, 67, 70, 0.2);
+            /* Nâu trầm mờ */
+            margin: 0 1rem;
+        }
+
+        .family-side-title {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .family-parent {
+            font-family: var(--font-serif);
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .family-child-role {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-top: 1.5rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .family-child-name {
+            font-family: var(--font-script);
+            font-size: clamp(2.5rem, 8vw, 3.2rem);
+            color: var(--text-dark);
+            line-height: 1;
+        }
+
+        /* =========================================
+           7. KHỐI THỜI GIAN & ĐỒNG HỒ ĐẾM NGƯỢC
+           ========================================= */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            padding: 3.5rem 2rem;
+            margin-bottom: 4rem;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .date-display {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .time-display {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .countdown-wrap {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cd-box {
+            text-align: center;
+        }
+
+        .cd-number {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .cd-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+        }
+
+        /* =========================================
+   8. LƯỚI BẢN ĐỒ VÀ KHUNG KÍNH GOOGLE MAPS
+========================================= */
+        .maps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .map-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            padding: 2.5rem 1.5rem;
+            box-shadow: var(--glass-shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .map-address {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        /* --- KIẾN TRÚC NHÚNG BẢN ĐỒ VÀO KHUNG KÍNH --- */
+        .map-iframe-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--glass-border);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+            background: #e9e5e0;
+            /* Màu nền giấy ngà chờ tải */
+        }
+
+        /* Áp chế màu sắc mặc định của Google Maps để giữ độ Sang trọng (Luxury) */
+        .map-iframe-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: grayscale(20%) contrast(1.1) sepia(10%);
+            transition: filter 0.5s var(--ease-fluid);
+        }
+
+        /* Trả lại màu gốc khi khách rê chuột/chạm vào */
+        .map-iframe-wrapper iframe:hover {
+            filter: grayscale(0%) contrast(1) sepia(0%);
+        }
+
+        /* --- NÚT DẪN ĐƯỜNG GOOGLE MAPS (LUXURY BUTTON) --- */
+        .luxury-map-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 12px 28px;
+            background: transparent;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.4s var(--ease-fluid);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .luxury-map-btn:hover {
+            background: var(--text-dark);
+            color: #fff;
+            border-color: var(--text-dark);
+            box-shadow: 0 10px 25px rgba(74, 53, 56, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Ép tỷ lệ bản đồ vuông hơn trên điện thoại để khách dễ vuốt */
+        @media (max-width: 768px) {
+            .map-iframe-wrapper {
+                aspect-ratio: 4 / 3;
+            }
+        }
+
+        /* =========================================
+           9. LƯỚI BIỂU MẪU RSVP (Giữ nguyên 100% gốc)
+           ========================================= */
+        .rsvp-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .rsvp-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            padding: 3rem 2rem;
+            box-shadow: var(--glass-shadow);
+            text-align: left;
+        }
+
+        .rsvp-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-style: italic;
+            font-weight: 500;
+            color: var(--accent-gold);
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 1.7rem;
+            position: relative;
+        }
+
+        .form-control {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(74, 53, 56, 0.2);
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            padding: 10px 5px;
+            outline: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .form-control::placeholder {
+            color: var(--text-muted);
+            opacity: 0.7;
+            font-style: italic;
+        }
+
+        .form-line-glow {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-gold);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.5s var(--ease-fluid);
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .form-control:focus~.form-line-glow {
+            transform: scaleX(1);
+        }
+
+        select.form-control {
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+
+        textarea.form-control {
+            resize: none;
+            min-height: 80px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--text-dark);
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: background 0.4s var(--ease-fluid), transform 0.3s var(--ease-elastic);
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(58, 38, 40, 0.1);
+        }
+
+        .btn-submit:hover {
+            background: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        /* ========================================= 9.5 KIẾN TRÚC HỘP MỪNG CƯỚI ========================================= */
+        .gift-box {
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            padding: 4rem 2rem;
+            margin-bottom: 5rem;
+            box-shadow: var(--glass-shadow);
+            text-align: center;
+        }
+
+        .gift-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-style: italic;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .gift-subtitle {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Các nút bấm thanh lịch */
+        .gift-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .gift-tab-btn {
+            background: transparent;
+            border: 1px solid rgba(198, 159, 116, 0.5);
+            color: var(--text-dark);
+            padding: 0.8rem 2.5rem;
+            border-radius: 30px;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.4s var(--ease-fluid);
+            outline: none;
+        }
+
+        .gift-tab-btn:hover,
+        .gift-tab-btn.active {
+            background: var(--text-dark);
+            color: #fff;
+            border-color: var(--text-dark);
+            box-shadow: 0 10px 20px rgba(74, 53, 56, 0.15);
+        }
+
+        /* Động cơ trượt mở phong thư (Accordion) */
+        .qr-panel {
+            display: grid;
+            grid-template-rows: 0fr;
+            /* Đóng chặt */
+            transition: grid-template-rows 0.6s var(--ease-masterpiece);
+        }
+
+        .qr-panel.active {
+            grid-template-rows: 1fr;
+            /* Mở bung ra mượt mà */
+        }
+
+        .qr-card {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.4s ease, transform 0.6s var(--ease-masterpiece);
+        }
+
+        .qr-panel.active .qr-card {
+            opacity: 1;
+            transform: translateY(0);
+            padding-top: 1.5rem;
+            /* Tạo khoảng thở khi thẻ được mở ra */
+        }
+
+        /* Định dạng QR và Chữ số ngân hàng */
+        .qr-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            padding: 10px;
+            background: #ffffff;
+            /* Bắt buộc nền trắng để quét QR không bị lỗi */
+            box-shadow: 0 15px 35px rgba(220, 160, 175, 0.2);
+            margin-bottom: 1.5rem;
+        }
+
+        .bank-owner {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ĐỒNG BỘ: Số tài khoản hiển thị sắc nét, chuẩn công năng */
+        .bank-number {
+            font-family: var(--font-sans);
+            font-size: 1.5rem;
+            font-weight: 600;
+            /* Làm đậm để rõ nét */
+            color: var(--text-dark);
+            /* Trả về màu nâu trầm đồng bộ với tên chủ thẻ */
+            margin-bottom: 0.3rem;
+            letter-spacing: 3px;
+            /* Kéo giãn khoảng cách để các con số tách bạch, chống nhìn nhầm */
+        }
+
+        .bank-name {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+        }
+
+        /* Tối ưu Mobile */
+        @media (max-width: 768px) {
+            .gift-box {
+                padding: 3rem 1.5rem;
+            }
+
+            .gift-tabs {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+        }
+
+        /* =========================================
+           10. PHÒNG TRƯNG BÀY TRANH BO GÓC SO LE
+           ========================================= */
+        /* --- KIẾN TRÚC TIÊU ĐỀ PHÒNG TRANH --- */
+        /* ĐỒNG BỘ: Tiêu đề phòng tranh khớp 100% với hệ thống tiêu đề chung */
+        .gallery-title {
+            position: relative;
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-style: italic;
+            font-weight: 500;
+            color: var(--text-dark);
+            /* ĐÃ ĐỔI VỀ MÀU NÂU ĐỎ TRẦM QUYỀN LỰC */
+            text-align: center;
+            letter-spacing: 1px;
+            margin: 4rem auto 4rem auto;
+            padding: 1.5rem 0;
+            display: block;
+        }
+
+        /* Đúc 2 thanh kim loại vàng kẹp trên/dưới tiêu đề */
+        .gallery-title::before,
+        .gallery-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            /* Chiều dài nét gạch cực kỳ tinh tế, không quá lố */
+            height: 1px;
+            background: var(--accent-gold);
+        }
+
+        .gallery-title::before {
+            top: 0;
+        }
+
+        .gallery-title::after {
+            bottom: 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .photo-wrapper {
+            width: 100%;
+            aspect-ratio: 3/4;
+            border-radius: var(--radius-md);
+            background: var(--glass-bg);
+            box-shadow: var(--glass-shadow);
+            overflow: hidden;
+            clip-path: inset(12% 12% 12% 12% round var(--radius-md));
+            -webkit-clip-path: inset(12% 12% 12% 12% round var(--radius-md));
+            opacity: 0;
+            transition: clip-path 1.8s var(--ease-masterpiece), -webkit-clip-path 1.8s var(--ease-masterpiece), opacity 1.2s var(--ease-fluid);
+            will-change: clip-path, opacity;
+        }
+
+        /* --- KIẾN TRÚC LƯỚI TẠP CHÍ CAO CẤP (EDITORIAL GRID) --- */
+
+        /* Ảnh 1: Mở màn bằng khung hình Điện ảnh (Cinematic) khổng lồ */
+        .photo-wrapper:nth-child(1) {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        /* Ảnh 2 & 3: Đứng thẳng cạnh nhau (Tỷ lệ 3/4 mặc định) */
+
+        /* Ảnh 4: Điểm nghỉ nhịp điệu với tỷ lệ khung hình cổ điển */
+        .photo-wrapper:nth-child(4) {
+            grid-column: span 2;
+            aspect-ratio: 4/3;
+        }
+
+        /* Ảnh 5 & 6: Đứng thẳng cạnh nhau */
+
+        /* Ảnh 7: Cú "Punch" thị giác - Tỷ lệ siêu ngang (Panorama) kịch tính */
+        .photo-wrapper:nth-child(7) {
+            grid-column: span 2;
+            aspect-ratio: 21/9;
+        }
+
+        /* Ảnh 8 & 9: Đứng thẳng cạnh nhau */
+
+        /* Ảnh 10: Kết thúc khoảnh khắc bằng khung ảnh chữ nhật rộng */
+        .photo-wrapper:nth-child(10) {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        .photo-wrapper.active {
+            clip-path: inset(0% 0% 0% 0% round var(--radius-md));
+            -webkit-clip-path: inset(0% 0% 0% 0% round var(--radius-md));
+            opacity: 1;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            transform: scale(1.15);
+            filter: blur(15px);
+            transition: transform 2s var(--ease-fluid), filter 1.5s var(--ease-fluid);
+            will-change: transform, filter;
+        }
+
+        .photo-wrapper.active .gallery-img {
+            transform: scale(1);
+            filter: blur(0);
+        }
+
+        .photo-wrapper:hover .gallery-img {
+            transform: scale(1.04);
+            transition: transform 0.6s var(--ease-fluid);
+        }
+
+        /* =========================================
+           11. LỜI CẢM ƠN
+           ========================================= */
+        /* --- KIẾN TRÚC LỜI CÁO CHUNG (EPILOGUE) --- */
+        .epilogue {
+            position: relative;
+            margin-top: 10rem;
+            padding: 4rem 1rem;
+            /* Đẩy padding trên/dưới để tạo khoảng không gian ôm trọn chữ ký */
+            text-align: center;
+        }
+
+        /* Vẽ ranh giới bằng ánh sáng lỏng (Linear Gradient tan biến 2 đầu) */
+        .epilogue::before,
+        .epilogue::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            /* Độ rộng khung bọc bằng 70% màn hình */
+            max-width: 400px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(198, 159, 116, 0.8), transparent);
+        }
+
+        .epilogue::before {
+            top: 0;
+        }
+
+        .epilogue::after {
+            bottom: 0;
+        }
+
+        /* Khuôn đúc chữ Thank You - Đối trọng hoàn hảo với nét chữ ký bay bướm */
+        .final-thank-you {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 12px;
+            /* Kéo cực giãn để tạo sự tĩnh lặng, đắt tiền */
+            color: var(--text-muted);
+            margin-top: 5rem;
+            /* Cách ly ra khỏi phần chữ ký */
+        }
+
+        .thank-you-text {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- KIẾN TRÚC CHỮ KÝ KẾT THÚC ĐỒNG BỘ --- */
+        .signature {
+            font-family: var(--font-script);
+            font-size: clamp(3.8rem, 12vw, 5.5rem);
+            /* Đồng bộ kích thước chuẩn với Hero */
+            color: var(--text-dark);
+            /* Màu mực trầm (Nâu đỏ) quyền lực */
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .signature-amp {
+            font-size: clamp(3.5rem, 10vw, 4.5rem);
+            color: var(--accent-gold);
+            /* Ký tự & màu vàng Champagne làm điểm nhấn */
+            margin: -2.5rem 0;
+            /* Lực hút cực mạnh để kéo sát hai cái tên đan vào nhau */
+            position: relative;
+            z-index: 2;
+        }
+
+        /* =========================================
+           12. NÚT ĐIỀU KHIỂN ÂM NHẠC NỔI (FLOATING MUSIC BTN)
+           ========================================= */
+        .music-floating-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            /* Đặt ở góc trái để không vướng nút cuộn lên/xuống của điện thoại */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 25px rgba(220, 160, 175, 0.4);
+            z-index: 99999;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.4s var(--ease-elastic), background 0.3s var(--ease-fluid);
+            outline: none;
+        }
+
+        .music-floating-btn:hover {
+            transform: scale(1.1);
+            background: #ffffff;
+        }
+
+        .music-icon {
+            width: 22px;
+            height: 22px;
+            fill: var(--accent-gold);
+            animation: spinMusic 4s linear infinite;
+            transform-origin: center;
+            pointer-events: none;
+            /* DÒNG THẦN THÁNH: Chống kẹt thẻ SVG */
+        }
+
+        /* Khi nút có class "paused", animation xoay sẽ dừng lại */
+        .music-floating-btn.paused .music-icon {
+            animation-play-state: paused;
+            fill: var(--text-muted);
+            /* Chuyển màu trầm khi tắt nhạc */
+        }
+
+        /* =========================================
+           ĐIỀU HƯỚNG HIỂN THỊ ICON NHẠC
+           ========================================= */
+
+        /* Trạng thái mặc định: Hiển thị nốt nhạc bình thường, Ẩn nốt nhạc gạch */
+        .icon-play {
+            display: block;
+        }
+
+        .icon-mute {
+            display: none;
+        }
+
+        /* Trạng thái tắt nhạc (Khi nút bị gán class 'paused') */
+        .music-floating-btn.paused .icon-play {
+            display: none;
+            /* Giấu icon đang phát đi */
+        }
+
+        .music-floating-btn.paused .icon-mute {
+            display: block;
+            /* Hiện icon gạch chéo lên */
+            animation: none;
+            /* Chắc chắn rằng nốt nhạc bị gạch thì KHÔNG xoay */
+            fill: var(--text-muted);
+            /* Chuyển sang màu trầm để báo hiệu trạng thái tắt */
+        }
+
+        @keyframes spinMusic {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive cho điện thoại: Nút nhỏ lại một chút */
+        @media (max-width: 768px) {
+            .music-floating-btn {
+                bottom: 20px;
+                left: 20px;
+                width: 45px;
+                height: 45px;
+            }
+
+            .music-icon {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* ÉP TỶ LỆ POLAROID TRÊN MÀN HÌNH NHỎ */
+            .polaroid-v-anchor {
+                height: 320px;
+                margin-bottom: 1rem;
+            }
+
+            .polaroid-card {
+                width: 180px;
+                padding: 10px 10px 35px 10px;
+            }
+
+            /* Căn chỉnh lại điểm rơi của cú va chạm trên màn hình nhỏ */
+            .polaroid-collision-section.active .groom-card {
+                transform: translateX(-50%) rotate(-12deg) scale(1);
+            }
+
+            .polaroid-collision-section.active .bride-card {
+                transform: translateX(50%) rotate(12deg) scale(1);
+            }
+
+            /* Hiệu ứng khi bấm vào ảnh trên Mobile */
+            .polaroid-collision-section.active .groom-card.is-focused {
+                transform: translateX(-50%) scale(1.05) rotate(0deg) !important;
+            }
+
+            .polaroid-collision-section.active .bride-card.is-focused {
+                transform: translateX(50%) scale(1.05) rotate(0deg) !important;
+            }
+
+            .invitation-statement {
+                font-size: 1.5rem;
+                margin: 4rem 0;
+            }
+
+            .trio-gallery {
+                gap: 0.5rem;
+            }
+
+            .trio-item:nth-child(2) {
+                transform: translateY(20px) scale(1.05);
+            }
+
+            /* MỞ RỘNG DIỆN TÍCH HIỂN THỊ, BÓP NGHẸT LỚP KÍNH THỪA */
+            .content-section {
+                padding: 2rem 0.8rem 5rem 0.8rem;
+                /* Giảm padding trái/phải của toàn trang */
+            }
+
+            .glass-card,
+            .rsvp-card,
+            .map-card,
+            .gift-box,
+            .calendar-inner {
+                padding: 2rem 1rem;
+                /* Rọc sạch mỡ thừa của thẻ kính, trả không gian cho chữ */
+                border-radius: 16px;
+                /* Hạ bo góc cho phù hợp điện thoại */
+            }
+
+            /* Siết khoảng cách cột gia đình trên Mobile để không bị tràn vỡ chữ */
+            .family-divider {
+                margin: 0 0.5rem;
+            }
+
+            .family-col {
+                padding: 0 0.2rem;
+            }
+
+            .maps-grid,
+            .rsvp-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .rsvp-card {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .ring-1 {
+                width: 260px;
+                height: 260px;
+            }
+
+            .ring-2 {
+                width: 280px;
+                height: 280px;
+            }
+
+            .ring-3 {
+                width: 300px;
+                height: 300px;
+            }
+
+            .homage-name {
+                font-size: 1.8rem;
+            }
+
+            .countdown-wrap {
+                gap: 1rem;
+            }
+
+            .cd-number {
+                font-size: 2rem;
+            }
+
+            /* ÉP TỶ LỆ ẢNH TẠP CHÍ TRÊN ĐIỆN THOẠI ĐỂ KHÔNG BỊ QUÁ MỎNG */
+            .gallery-grid {
+                gap: 1rem;
+                /* Thu nhỏ rãnh chia cắt trên mobile cho khít lại */
+            }
+
+            .photo-wrapper:nth-child(1),
+            .photo-wrapper:nth-child(10) {
+                aspect-ratio: 4/3;
+                /* Thu bớt độ ngang để ảnh rõ mặt hơn */
+            }
+
+            .photo-wrapper:nth-child(7) {
+                aspect-ratio: 16/9;
+                /* Chuyển Panorama thành tỷ lệ ngang tiêu chuẩn */
+            }
+
+        }
+
+        /* =========================================
+   [PIXEL-PERFECT] 1. LỊCH THÁNG & COVER (JUST MARRIED)
+========================================= */
+        .calendar-wrapper {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 0 auto 5rem auto;
+            box-shadow: var(--glass-shadow);
+            max-width: 500px;
+        }
+
+        .cal-hero-img {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4/3;
+        }
+
+        .cal-hero-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cal-hero-overlay {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            text-align: right;
+            color: #ffffff;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .cal-hero-just {
+            font-family: var(--font-script);
+            font-size: 3.5rem;
+            line-height: 0.8;
+            margin-right: 15px;
+            font-weight: 400;
+        }
+
+        .cal-hero-married {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .calendar-inner {
+            padding: 3rem 1.5rem 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .cal-header-stack {
+            position: relative;
+            height: 110px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cal-year {
+            font-family: var(--font-serif);
+            font-size: 5rem;
+            color: var(--text-dark);
+            /* Đã đồng bộ với Nâu đỏ trầm */
+            opacity: 0.9;
+            line-height: 1;
+            position: absolute;
+            top: 0;
+        }
+
+        .cal-month {
+            font-family: var(--font-script);
+            font-size: 4.5rem;
+            color: var(--accent-gold);
+            /* Đã đồng bộ với Vàng champagne */
+            position: absolute;
+            top: 35px;
+            z-index: 2;
+        }
+
+        .cal-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            font-family: var(--font-sans);
+        }
+
+        .cal-day-name {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .cal-date {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cal-date.highlight {
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .cal-date.highlight::before {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background-color: var(--text-dark);
+            /* Trái tim nâu đỏ trầm quyền lực */
+            mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+            -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+            mask-size: cover;
+            -webkit-mask-size: cover;
+            z-index: -1;
+        }
+
+        /* =========================================
+   [PIXEL-PERFECT] 2. TIMELINE ĐIỆN ẢNH (TRÀN VIỀN 100VW)
+   ========================================= */
+        .timeline-section {
+            position: relative;
+            /* Thuật toán tử huyệt: Bẻ gãy giới hạn thẻ cha, bung ra 100vw */
+            width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            border-radius: 0;
+            /* Đập bỏ bo góc để phẳng sát mép */
+            overflow: hidden;
+            box-shadow: none;
+            /* Hủy bóng đổ lọt thỏm */
+        }
+
+        .timeline-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.9);
+            z-index: 1;
+        }
+
+        .timeline-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 5rem 2.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+        }
+
+        .timeline-title {
+            font-family: var(--font-script);
+            font-size: 5rem;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 3.5rem;
+            font-weight: 400;
+        }
+
+        .tl-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Khai tử SVG, kích hoạt buồng chứa vật lý cho Icon Timeline */
+        .tl-icon {
+            width: 55px;
+            /* Mở rộng buồng chứa để vật thể bung tỏa */
+            height: 55px;
+            flex-shrink: 0;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .timeline-physic-icon {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* Ép vật thể hiển thị trọn vẹn không bị méo */
+            filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.5));
+            /* Bóng đổ 3D sâu thẳm */
+            transform: scale(1.1);
+            transition: transform 0.4s var(--ease-elastic), filter 0.4s var(--ease-fluid);
+            will-change: transform, filter;
+        }
+
+        /* TƯƠNG TÁC THAO TÚNG: Khi khách chạm/di chuột vào cột mốc */
+        .tl-row:hover .timeline-physic-icon {
+            transform: scale(1.3) rotate(-8deg);
+            /* Vật thể bung lên và nghiêng nhẹ đắc ý */
+            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.7));
+        }
+
+        .tl-text-block {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tl-time {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: #ffffff;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+        }
+
+        .tl-line {
+            height: 1.5px;
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            margin-bottom: 6px;
+            width: calc(100%);
+            transform: translateX(0px);
+        }
+
+        .tl-desc {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.5;
+        }
+
+        /* =========================================
+   [PIXEL-PERFECT] 3. OUR MEMORIES (1 ẢNH CẮT 3 ĐỐI XỨNG NGANG HOÀN HẢO)
+========================================= */
+        .memories-triptych-single {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin: 0 auto 2.5rem auto;
+            aspect-ratio: 16 / 9;
+
+            /* [ĐÃ TINH CHỈNH VECTOR TỌA ĐỘ]: 
+       Rãnh hẹp lại (gap 1.25%), 2 ảnh hông cao lên 90% (chỉ hụt 5% ở đỉnh và đáy) */
+            mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='5' width='32.5' height='90' fill='white' rx='1'/%3E%3Crect x='33.75' y='0' width='32.5' height='100' fill='white' rx='1'/%3E%3Crect x='67.5' y='5' width='32.5' height='90' fill='white' rx='1'/%3E%3C/svg%3E");
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='5' width='32.5' height='90' fill='white' rx='1'/%3E%3Crect x='33.75' y='0' width='32.5' height='100' fill='white' rx='1'/%3E%3Crect x='67.5' y='5' width='32.5' height='90' fill='white' rx='1'/%3E%3C/svg%3E");
+            mask-size: 100% 100%;
+            -webkit-mask-size: 100% 100%;
+            transition: transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .memories-triptych-single img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .memories-logo {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .memories-logo svg {
+            width: 45px;
+            height: 45px;
+            fill: var(--accent-gold);
+            opacity: 0.8;
+        }
+
+        .memories-title-script {
+            font-family: var(--font-script);
+            font-size: clamp(4rem, 12vw, 5.5rem);
+            color: var(--text-dark);
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+
+        /* Tối ưu Mobile cho khối mới */
+        @media (max-width: 768px) {
+            .cal-year {
+                font-size: 4rem;
+            }
+
+            .cal-month {
+                font-size: 3.5rem;
+                top: 30px;
+            }
+
+            .cal-hero-just {
+                font-size: 3rem;
+            }
+
+            .cal-hero-married {
+                font-size: 1.8rem;
+            }
+
+            .timeline-title {
+                font-size: 4.5rem;
+            }
+
+            .timeline-wrapper {
+                padding: 3rem 1rem;
+            }
+
+            .memories-triptych-single {
+                aspect-ratio: 3 / 2;
+            }
+        }
+
+        /* =========================================
+           [BỔ SUNG] HỆ TRỤC GRID CHO FORM RSVP LUXURY (WARM THEME)
+           ========================================= */
+        .form-row {
+            display: flex;
+            gap: 1.5rem;
+            width: 100%;
+            margin-bottom: 1.7rem;
+        }
+
+        .form-col {
+            flex: 1;
+            min-width: 0;
+            /* Ép không cho tràn flexbox */
+        }
+
+        /* Triệt tiêu margin của thẻ group khi nằm trong lưới ngang để đồng bộ khoảng cách */
+        .form-row .form-group {
+            margin-bottom: 0;
+        }
+
+        /* UX: Làm mờ ô Số lượng khi chọn Không tham dự (Tone Nâu ấm) */
+        .form-control:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            border-bottom-color: rgba(74, 53, 56, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 1.7rem;
+                margin-bottom: 0;
+            }
+        }
+
+        /* =========================================
+   [UX ENGINE] KHÓA CUỘN MÀN HÌNH INTRO
+   ========================================= */
+        body.scroll-locked {
+            overflow: hidden !important;
+            height: 100dvh !important;
+            touch-action: none !important;
+            /* Chặn đứng mọi thao tác vuốt trượt trên Mobile */
+        }
+
+        /* =========================================
+   HỆ SINH THÁI THỰC VẬT (FLORAL ANCHORS)
+   ========================================= */
+
+        /* 1. Hoa treo lơ lửng Hero */
+        .floral-hanging {
+            position: absolute;
+            top: -2%;
+            left: -5%;
+            width: 120%;
+            /* Tràn nhẹ ra viền để tự nhiên */
+            max-width: 600px;
+            z-index: 5;
+            pointer-events: none;
+            filter: drop-shadow(0 15px 15px rgba(230, 168, 182, 0.4));
+            transform-origin: top center;
+            animation: swingFloral 8s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+
+        @keyframes swingFloral {
+            0% {
+                transform: rotate(-3deg) translateY(0);
+            }
+
+            100% {
+                transform: rotate(3deg) translateY(5px);
+            }
+        }
+
+        /* 2. Cấu trúc vật chủ bám hoa (Dành cho Glass-card) */
+        .floral-host {
+            position: relative;
+            overflow: hidden;
+            /* Cắt bớt phần hoa chọc ra ngoài kính */
+        }
+
+        .floral-ontop,
+        .countdown-wrap,
+        .gift-tabs,
+        .qr-panel,
+        .gift-subtitle {
+            position: relative;
+            z-index: 2;
+            /* Ép nội dung chữ nổi lên trên hoa */
+        }
+
+        /* 3. Vòng khuyên hoa hồng ở khối Thời Gian */
+        .floral-halo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+            width: 140%;
+            max-width: 550px;
+            z-index: 0;
+            opacity: 0.25;
+            /* Làm chìm xuống như một hình xăm trong kính */
+            pointer-events: none;
+            animation: spinHalo 40s linear infinite;
+            will-change: transform;
+        }
+
+        @keyframes spinHalo {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* 4. Đóng đinh hoa L-Shape (Góc phải trên Hộp Quà) */
+        .floral-corner-top-right {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 250px;
+            z-index: 0;
+            opacity: 0.6;
+            pointer-events: none;
+            filter: drop-shadow(-5px 10px 10px rgba(230, 168, 182, 0.3));
+        }
+
+        /* 5. Cụm hoa khối lượng lớn (Góc trái dưới Lời cảm ơn) */
+        .floral-corner-bottom-left {
+            position: absolute;
+            bottom: 0;
+            left: -20px;
+            width: 280px;
+            z-index: -1;
+            /* Chìm hẳn sau lớp sương mù */
+            opacity: 0.7;
+            pointer-events: none;
+            filter: drop-shadow(10px -10px 15px rgba(230, 168, 182, 0.3));
+        }
+
+        /* Responsive bóp tỷ lệ hoa trên Mobile */
+        @media (max-width: 768px) {
+            .floral-hanging {
+                max-width: 350px;
+                left: -10%;
+            }
+
+            .floral-halo {
+                width: 180%;
+            }
+
+            .floral-corner-top-right {
+                width: 150px;
+            }
+
+            .floral-corner-bottom-left {
+                width: 180px;
+            }
+        }
+
+        /* =========================================
+   THUẬT TOÁN HỦY DIỆT: ĐẬP NÁT LỒNG KÍNH (NUCLEAR OVERRIDE)
+   ========================================= */
+        .glass-card,
+        .map-card,
+        .rsvp-card,
+        .gift-box {
+            /* Đánh sập nền và viền */
+            background: transparent !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            border: none !important;
+            box-shadow: none !important;
+
+            /* Triệt tiêu lớp đệm ngang, giải phóng không gian để nội dung bung to ra */
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            border-radius: 0 !important;
+        }
+
+        /* Khi không còn lồng kính, để hoa cỏ bung tỏa tự nhiên, cấm cắt xén! */
+        .floral-host {
+            overflow: visible !important;
+        }
+
+        /* Đẩy khoảng cách giữa cụm Form RSVP và Maps rộng ra thêm một chút khi không còn khung */
+        .maps-grid,
+        .rsvp-grid {
+            gap: 3.5rem !important;
+        }
+
+        /* =========================================
+   [KHO VŨ KHÍ] HỆ SINH THÁI THỰC VẬT & KHÓI SƯƠNG
+   ========================================= */
+
+        /* 1. KHỐI 2 (khoi_2.png) - ĐIỂM NHẤN TRUNG TÂM NỀN 
+   Lưu ý: Ngài hãy bọc nó trong một container có position: relative và overflow: hidden */
+        .center-splash-accent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 140%;
+            /* Bành trướng bao phủ */
+            max-width: 800px;
+            z-index: -1;
+            /* Chìm sâu xuống dưới đáy */
+            opacity: 0.65;
+            mix-blend-mode: multiply;
+            /* Thuật toán tử huyệt: Ép khói ăn vỡ vào vân giấy */
+            pointer-events: none;
+            animation: splashBreathe 25s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+
+        @keyframes splashBreathe {
+            0% {
+                transform: translate(-50%, -50%) scale(1) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.1) rotate(5deg);
+            }
+        }
+
+        /* 2. HOA 1 (hoa_1.png) - TRANG TRÍ CHÍNH GIỮA */
+        .floral-center-piece {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            z-index: 1;
+            /* Nằm ngay dưới nội dung chữ */
+            opacity: 0.9;
+            pointer-events: none;
+            filter: drop-shadow(0 15px 25px rgba(230, 168, 182, 0.4));
+        }
+
+        /* 3. HOA 2 (hoa_2.png) - GÓC TRÁI TRÊN (ORIGINAL) */
+        .floral-corner-tl {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 220px;
+            z-index: 5;
+            pointer-events: none;
+            filter: drop-shadow(8px 8px 15px rgba(230, 168, 182, 0.4));
+        }
+
+        /* 4. HOA 2 (hoa_2.png) - GÓC PHẢI DƯỚI (LẬT NGƯỢC)
+   Lệnh rotate(180deg) sẽ xoay vặn cổ bức ảnh theo đúng ý ngài */
+        .floral-corner-br {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 220px;
+            z-index: 5;
+            pointer-events: none;
+            transform: rotate(180deg);
+            /* Lưỡi dao lật ngược 180 độ */
+            filter: drop-shadow(8px 8px 15px rgba(230, 168, 182, 0.4));
+        }
+
+        /* 5. HOA 3 (hoa_3.png) - TREO BUÔNG RỦ TỪ BÊN TRÊN */
+        .floral-hanging-top {
+            position: absolute;
+            top: -5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120%;
+            max-width: 600px;
+            z-index: 5;
+            pointer-events: none;
+            transform-origin: top center;
+            /* Đóng đinh ở đỉnh để đung đưa */
+            filter: drop-shadow(0 15px 20px rgba(230, 168, 182, 0.4));
+            animation: swingWind 12s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+
+        @keyframes swingWind {
+            0% {
+                transform: translateX(-50%) rotate(-2deg);
+            }
+
+            100% {
+                transform: translateX(-50%) rotate(2deg);
+            }
+        }
+
+        /* 6. HOA 4 (hoa_4.png) - VÒNG KHUYÊN BỌC NỘI DUNG QUAN TRỌNG */
+        .floral-wrap-halo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+            width: 150%;
+            /* Tràn nhẹ ra ngoài biên của khối nội dung */
+            max-width: 550px;
+            z-index: 0;
+            /* Nằm dưới chữ, làm nền bao bọc */
+            opacity: 0.35;
+            /* Độ mờ lý tưởng để không làm khó đọc chữ */
+            pointer-events: none;
+            animation: rotateHalo 40s linear infinite;
+            will-change: transform;
+        }
+
+        @keyframes rotateHalo {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* --- RESPONSIVE BÓP TỶ LỆ TRÊN MOBILE --- */
+        @media (max-width: 768px) {
+            .floral-center-piece {
+                width: 180px;
+            }
+
+            .floral-corner-tl,
+            .floral-corner-br {
+                width: 150px;
+            }
+
+            .floral-hanging-top {
+                max-width: 400px;
+            }
+
+            .floral-wrap-halo {
+                width: 180%;
+            }
+        }
+    </style>
+</head>
+
+<body class="scroll-locked">
+
+    <div id="masterpiece-intro">
+        <div id="cinematic-whisper" class="cinematic-whisper" style="display: none;">
+            <div class="whisper-prefix">Thân gửi,</div>
+            <div id="whisper-name" class="whisper-name"></div>
+        </div>
+
+        <!-- ẢO THUẬT 1: LỚP KHÓI CHẺ ĐÔI KHI VỪA VÀO TRANG -->
+        <img src="khoi_2.png" class="intro-smoke-curtain smoke-left" alt="Khói trái">
+        <img src="khoi_2.png" class="intro-smoke-curtain smoke-right" alt="Khói phải">
+
+        <!-- ẢO THUẬT 2: VÒNG HOA QUYỀN LỰC XOAY QUANH TÊN -->
+        <div class="intro-halo-wrapper">
+            <img src="hoa_4.png" class="intro-floral-halo" alt="Vòng hoa Intro">
+        </div>
+        <div class="homage-text-box">
+            <div class="homage-pre">Lễ Thành Hôn</div>
+            <div class="homage-name">Đơn Dương</div>
+            <span class="homage-amp">&</span>
+            <div class="homage-name">Hồng Ánh</div>
+        </div>
+        <div class="intro-action-hint">Bấm để mở thiệp</div>
+        <img src="khoi_2.png" class="intro-smoke-sweep" alt="Khói quét">
+    </div>
+
+    <header class="hero cinematic-hero">
+        <!-- CẤY BỨC ẢNH VĨ ĐẠI CỦA NGÀI VÀO ĐÂY -->
+        <img src="anh.png" alt="Đơn Dương & Hồng Ánh" class="hero-bg-image" id="mainHeroImage">
+
+        <!-- LỚP SƯƠNG MÙ QUANG HỌC TẠO ĐỘ SÂU ĐỂ NỔI CHỮ -->
+        <div class="hero-overlay-gradient"></div>
+
+        <!-- CỤM TYPOGRAPHY NEO ĐÁY MÀN HÌNH CHUẨN ĐIỆN ẢNH -->
+        <div class="hero-bottom-text">
+            <div class="line-mask"><span class="animate-text-up script-save-date">Save the date</span></div>
+            <div class="line-mask"><span class="animate-text-up stagger-1 modern-couple-name">ĐƠN DƯƠNG & HỒNG
+                    ÁNH</span></div>
+            <div class="line-mask"><span class="animate-text-up stagger-2 modern-date">22 . 08 . 2026</span></div>
+        </div>
+    </header>
+
+    <main class="content-section">
+
+        <p class="quote-text reveal-card-3d">
+            "Trong phòng trưng bày của cuộc đời, tình yêu của chúng ta là tác phẩm tuyệt mỹ và trọn vẹn nhất."
+        </p>
+
+        <div class="polaroid-collision-section reveal-card-3d">
+            <img src="khoi_2.png" alt="Sương mù tâm chấn" class="center-splash-accent">
+            <div class="polaroid-v-anchor">
+                <div class="polaroid-card groom-card">
+                    <img src="anh.png" alt="Chú rể Đơn Dương" class="polaroid-img">
+                </div>
+                <div class="polaroid-card bride-card">
+                    <img src="anh.png" alt="Cô dâu Hồng Ánh" class="polaroid-img">
+                </div>
+            </div>
+            <!-- CỤM TÊN BỊ XÉ TOẠC RA HAI BÊN ĐÁY -->
+            <div class="polaroid-titles">
+                <div class="polaroid-names-wrapper">
+                    <!-- Tên Chú Rể (Bên Trái) -->
+                    <div class="line-mask"><span class="animate-text-up stagger-1 polaroid-name">Đơn Dương</span></div>
+                    <!-- Tên Cô Dâu (Bên Phải) -->
+                    <div class="line-mask"><span class="animate-text-up stagger-2 polaroid-name">Hồng Ánh</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="invitation-statement reveal-card-3d">
+            <img src="hoa_4.png" alt="Vòng khuyên hoa hồng" class="floral-wrap-halo">
+            Thư mời tham dự lễ cưới của<br>
+            <span>Đơn Dương</span><br>&<br> <span>Hồng Ánh</span>
+        </div>
+
+        <div class="trio-gallery reveal-card-3d">
+            <div class="trio-item"><img src="anh.png" alt="Trio 1"></div>
+            <div class="trio-item"><img src="anh.png" alt="Trio 2"></div>
+            <div class="trio-item"><img src="anh.png" alt="Trio 3"></div>
+        </div>
+
+        <div class="glass-card reveal-card-3d" style="margin-bottom: 5rem;">
+            <img src="khoi_2.png" alt="Sương mù tâm chấn" class="center-splash-accent">
+            <div class="line-mask card-title" style="text-align: center; margin-bottom: 2.5rem;"><span
+                    class="animate-text-up">Gia đình hai bên</span></div>
+            <div class="family-unity-split">
+                <!-- NHÀ TRAI BÊN TRÁI -->
+                <div class="family-col">
+                    <div class="family-side-title">Nhà Trai</div>
+                    <div class="family-parent">Ông: Đơn Văn X</div>
+                    <div class="family-parent">Bà: Nguyễn Thị Y</div>
+                    <div class="family-child-role">Chú Rể</div>
+                    <div class="family-child-name">Đơn Dương</div>
+                </div>
+
+                <!-- TRỤC THÉP CHIA ĐÔI THIÊN HẠ -->
+                <div class="family-divider"></div>
+
+                <!-- NHÀ GÁI BÊN PHẢI -->
+                <div class="family-col">
+                    <div class="family-side-title">Nhà Gái</div>
+                    <div class="family-parent">Ông: Nguyễn Văn Bình</div>
+                    <div class="family-parent">Bà: Đỗ Thị Vân</div>
+                    <div class="family-child-role">Cô Dâu</div>
+                    <div class="family-child-name">Hồng Ánh</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-wrapper reveal-card-3d">
+            <div class="cal-hero-img line-mask">
+                <img class="animate-text-up" src="anh.png" alt="Cover Lịch">
+                <div class="cal-hero-overlay animate-text-up stagger-1">
+                    <div class="cal-hero-just">Just</div>
+                    <div class="cal-hero-married">MARRIED</div>
+                </div>
+            </div>
+            <div class="calendar-inner">
+                <div class="cal-header-stack line-mask">
+                    <div class="animate-text-up cal-year">2026</div>
+                    <div class="animate-text-up cal-month stagger-1">August</div>
+                </div>
+                <div class="cal-grid line-mask">
+                    <div class="animate-text-up stagger-2" style="display: contents;">
+                        <div class="cal-day-name">T2</div>
+                        <div class="cal-day-name">T3</div>
+                        <div class="cal-day-name">T4</div>
+                        <div class="cal-day-name">T5</div>
+                        <div class="cal-day-name">T6</div>
+                        <div class="cal-day-name">T7</div>
+                        <div class="cal-day-name">CN</div>
+
+                        <div class="cal-date"></div>
+                        <div class="cal-date"></div>
+                        <div class="cal-date"></div>
+                        <div class="cal-date"></div>
+                        <div class="cal-date"></div>
+                        <div class="cal-date">1</div>
+                        <div class="cal-date">2</div>
+                        <div class="cal-date">3</div>
+                        <div class="cal-date">4</div>
+                        <div class="cal-date">5</div>
+                        <div class="cal-date">6</div>
+                        <div class="cal-date">7</div>
+                        <div class="cal-date">8</div>
+                        <div class="cal-date">9</div>
+                        <div class="cal-date">10</div>
+                        <div class="cal-date">11</div>
+                        <div class="cal-date">12</div>
+                        <div class="cal-date">13</div>
+                        <div class="cal-date">14</div>
+                        <div class="cal-date">15</div>
+                        <div class="cal-date">16</div>
+                        <div class="cal-date">17</div>
+                        <div class="cal-date">18</div>
+                        <div class="cal-date">19</div>
+                        <div class="cal-date">20</div>
+                        <div class="cal-date">21</div>
+                        <div class="cal-date highlight">22</div>
+                        <div class="cal-date">23</div>
+                        <div class="cal-date">24</div>
+                        <div class="cal-date">25</div>
+                        <div class="cal-date">26</div>
+                        <div class="cal-date">27</div>
+                        <div class="cal-date">28</div>
+                        <div class="cal-date">29</div>
+                        <div class="cal-date">30</div>
+                        <div class="cal-date">31</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-card reveal-card-3d">
+            <div class="glass-card reveal-card-3d floral-host">
+                <!-- HÀO QUANG HOA HỒNG ÔM TRỌN ĐỒNG HỒ -->
+                <img src="hoa_4.png" alt="Vòng hoa" class="floral-halo">
+                <div class="line-mask card-title"><span class="animate-text-up">Thời gian đại tiệc</span></div>
+                <div class="line-mask date-display"><span class="animate-text-up stagger-1">22 . 08 . 2026</span></div>
+                <div class="line-mask time-display"><span class="animate-text-up stagger-2">Vào lúc 05:30 PM</span>
+                </div>
+                <div class="line-mask"
+                    style="font-size: 0.95rem; line-height: 1.6; color: var(--text-dark); margin-top: 10px;">
+                    <span class="animate-text-up stagger-2"><strong>Kính Mời Quý Khách</strong><br>Tới Dự Bữa Cơm Thân
+                        Mật
+                        Với Hai Gia Đình Chúng Tôi</span>
+                </div>
+
+                <div class="countdown-wrap">
+                    <div class="cd-box">
+                        <div class="cd-number" id="cd-days">00</div>
+                        <div class="cd-label">Ngày</div>
+                    </div>
+                    <div class="cd-box">
+                        <div class="cd-number" id="cd-hours">00</div>
+                        <div class="cd-label">Giờ</div>
+                    </div>
+                    <div class="cd-box">
+                        <div class="cd-number" id="cd-mins">00</div>
+                        <div class="cd-label">Phút</div>
+                    </div>
+                    <div class="cd-box">
+                        <div class="cd-number" id="cd-secs">00</div>
+                        <div class="cd-label">Giây</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-section"> <!-- Lột bỏ lớp vỏ bọc kích hoạt tổng -->
+                <img src="anh.png" alt="Timeline Background" class="timeline-bg">
+                <div class="timeline-wrapper">
+
+                    <!-- Bơm cảm biến hiển thị độc lập cho Tiêu đề -->
+                    <div class="line-mask reveal-card-3d">
+                        <h2 class="animate-text-up timeline-title">Timeline</h2>
+                    </div>
+
+                    <!-- Bơm cảm biến hiển thị độc lập cho từng mốc thời gian -->
+                    <div class="tl-row line-mask reveal-card-3d">
+                        <div class="tl-icon animate-text-up"><img src="may_anh.png" alt="Chụp ảnh"
+                                class="timeline-physic-icon"></div>
+                        <div class="tl-text-block animate-text-up stagger-1">
+                            <div class="tl-time">17:30</div>
+                            <div class="tl-line"></div>
+                            <div class="tl-desc">Ăn kem, chụp ảnh với photobooth</div>
+                        </div>
+                    </div>
+
+                    <div class="tl-row line-mask reveal-card-3d">
+                        <div class="tl-icon animate-text-up"><img src="bo_hoa.png" alt="Đón khách"
+                                class="timeline-physic-icon"></div>
+                        <div class="tl-text-block animate-text-up stagger-1">
+                            <div class="tl-time">18:00</div>
+                            <div class="tl-line"></div>
+                            <div class="tl-desc">Tiếp đón khách mời</div>
+                        </div>
+                    </div>
+
+                    <div class="tl-row line-mask reveal-card-3d">
+                        <div class="tl-icon animate-text-up"><img src="hop_nhan.png" alt="Lễ cưới"
+                                class="timeline-physic-icon"></div>
+                        <div class="tl-text-block animate-text-up stagger-1">
+                            <div class="tl-time">18:30</div>
+                            <div class="tl-line"></div>
+                            <div class="tl-desc">Bắt đầu Lễ Thành Hôn</div>
+                        </div>
+                    </div>
+
+                    <div class="tl-row line-mask reveal-card-3d">
+                        <div class="tl-icon animate-text-up"><img src="ruou.png" alt="Khai tiệc"
+                                class="timeline-physic-icon"></div>
+                        <div class="tl-text-block animate-text-up stagger-1">
+                            <div class="tl-time">19:30</div>
+                            <div class="tl-line"></div>
+                            <div class="tl-desc">Khai tiệc chúc mừng</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="maps-grid">
+                <div class="map-card reveal-card-3d from-left">
+                    <div class="line-mask card-title"><span class="animate-text-up">Tiệc Cưới Nhà Trai</span></div>
+
+                    <div class="map-iframe-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3577.804515614709!2d105.77675099999999!3d19.807681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDQ4JzI3LjciTiAxMDXCsDQ2JzM2LjMiRQ!5e1!3m2!1svi!2s!4v1783056901597!5m2!1svi!2s"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="line-mask">
+                        <div class="animate-text-up stagger-1"
+                            style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 500; margin-bottom: 0.5rem;">
+                            Địa Chỉ Nhà Trai</div>
+                    </div>
+                    <div class="map-address">Ở chỗ nào Thanh Hóa ý</div>
+
+                    <a href="https://maps.app.goo.gl/cecRo3UiJEbjrwtV9" target="_blank" class="luxury-map-btn">Mở Ứng
+                        Dụng
+                        Chỉ
+                        Đường</a>
+                </div>
+
+                <div class="map-card reveal-card-3d from-right stagger-1">
+                    <div class="line-mask card-title"><span class="animate-text-up">Tiệc Cưới Nhà Gái</span></div>
+
+                    <div class="map-iframe-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d574.547087417033!2d106.02153802934953!3d21.198630618129613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDExJzU1LjEiTiAxMDbCsDAxJzE3LjYiRQ!5e1!3m2!1svi!2s!4v1783061899335!5m2!1svi!2s"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="line-mask">
+                        <div class="animate-text-up stagger-1"
+                            style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 500; margin-bottom: 0.5rem;">
+                            Địa Chỉ Nhà Gái</div>
+                    </div>
+                    <div class="map-address">Thôn Đông Phong, Xã Tam Đa, Huyện Yên Phong, Tỉnh Bắc Ninh</div>
+
+                    <a href="https://maps.app.goo.gl/ApAxQWtvuK63u4oi8" target="_blank" class="luxury-map-btn">Mở Ứng
+                        Dụng
+                        Chỉ
+                        Đường</a>
+                </div>
+            </div>
+
+            <div class="rsvp-grid">
+                <div class="rsvp-card reveal-card-3d from-left">
+                    <h3 class="rsvp-title">Khách mời Nhà Trai</h3>
+                    <form class="luxury-rsvp-form">
+                        <input type="hidden" name="side" value="nhatrai">
+
+                        <!-- Hàng 1: Tên & Mối quan hệ -->
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" placeholder="Quý danh của bạn"
+                                        required>
+                                    <div class="form-line-glow"></div>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="relation"
+                                        placeholder="Mối quan hệ (VD: Bạn đại học...)" required>
+                                    <div class="form-line-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hàng 2: Số điện thoại & Số lượng -->
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" name="phone" placeholder="Số điện thoại"
+                                        required>
+                                    <div class="form-line-glow"></div>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <select class="form-control guest-select" name="guests" required>
+                                        <option value="" disabled selected>Số lượng tham dự</option>
+                                        <option value="1">1 người (Chỉ mình tôi)</option>
+                                        <option value="2">2 người (Có người đi cùng)</option>
+                                        <option value="3">3 người</option>
+                                        <option value="4">4 người</option>
+                                        <option value="5+">5 người trở lên</option>
+                                    </select>
+                                    <div class="form-line-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hàng 3 & 4: Tham dự & Lời chúc -->
+                        <div class="form-group">
+                            <select class="form-control attendance-select" name="attendance" required>
+                                <option value="" disabled selected>Bạn sẽ tới chung vui chứ?</option>
+                                <option value="yes">Vâng, tôi sẽ đến</option>
+                                <option value="no">Rất tiếc, tôi không thể</option>
+                            </select>
+                            <div class="form-line-glow"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="wishes"
+                                placeholder="Gửi lời chúc đến hai bạn..."></textarea>
+                            <div class="form-line-glow"></div>
+                        </div>
+                        <button type="submit" class="btn-submit">Xác nhận</button>
+                    </form>
+                </div>
+
+                <div class="rsvp-card reveal-card-3d from-right stagger-1">
+                    <h3 class="rsvp-title">Khách mời Nhà Gái</h3>
+                    <form class="luxury-rsvp-form">
+                        <input type="hidden" name="side" value="nhagai">
+
+                        <!-- Hàng 1: Tên & Mối quan hệ -->
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" placeholder="Quý danh của bạn"
+                                        required>
+                                    <div class="form-line-glow"></div>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="relation"
+                                        placeholder="Mối quan hệ (VD: Đồng nghiệp...)" required>
+                                    <div class="form-line-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hàng 2: Số điện thoại & Số lượng -->
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" name="phone" placeholder="Số điện thoại"
+                                        required>
+                                    <div class="form-line-glow"></div>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <select class="form-control guest-select" name="guests" required>
+                                        <option value="" disabled selected>Số lượng tham dự</option>
+                                        <option value="1">1 người (Chỉ mình tôi)</option>
+                                        <option value="2">2 người (Có người đi cùng)</option>
+                                        <option value="3">3 người</option>
+                                        <option value="4">4 người</option>
+                                        <option value="5+">5 người trở lên</option>
+                                    </select>
+                                    <div class="form-line-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hàng 3 & 4: Tham dự & Lời chúc -->
+                        <div class="form-group">
+                            <select class="form-control attendance-select" name="attendance" required>
+                                <option value="" disabled selected>Bạn sẽ tới chung vui chứ?</option>
+                                <option value="yes">Vâng, tôi sẽ đến</option>
+                                <option value="no">Rất tiếc, tôi không thể</option>
+                            </select>
+                            <div class="form-line-glow"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="wishes"
+                                placeholder="Gửi lời chúc đến hai bạn..."></textarea>
+                            <div class="form-line-glow"></div>
+                        </div>
+                        <button type="submit" class="btn-submit">Xác nhận</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="gift-box reveal-card-3d">
+                <img src="hoa_2.png" alt="Hoa góc trái trên" class="floral-corner-tl">
+                <img src="hoa_2.png" alt="Hoa góc phải dưới" class="floral-corner-br">
+                <h2 class="gift-title">Gửi Gắm Yêu Thương</h2>
+                <p class="gift-subtitle">Sự hiện diện của quý khách là món quà trân quý nhất. Nếu quý khách ở xa hoặc
+                    muốn
+                    gửi gắm thêm lời chúc phúc, xin vui lòng chọn:</p>
+
+                <div class="gift-tabs">
+                    <button class="gift-tab-btn" data-qr="qr-groom">Gửi Chú Rể</button>
+                    <button class="gift-tab-btn" data-qr="qr-bride">Gửi Cô Dâu</button>
+                </div>
+
+                <div class="qr-panel" id="qr-groom">
+                    <div class="qr-card">
+                        <img src="anh.png" alt="QR Chú Rể" class="qr-image">
+                        <div class="bank-details">
+                            <div class="bank-owner">TRỊNH ĐƠN DƯƠNG</div>
+                            <div class="bank-number">0123456789</div>
+                            <div class="bank-name">Ngân hàng MB Bank</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="qr-panel" id="qr-bride">
+                    <div class="qr-card">
+                        <img src="anh.png" alt="QR Cô Dâu" class="qr-image">
+                        <div class="bank-details">
+                            <div class="bank-owner">NGUYỄN THỊ HỒNG ÁNH</div>
+                            <div class="bank-number">9876543210</div>
+                            <div class="bank-name">Ngân hàng Vietcombank</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal-card-3d">
+                <div class="memories-triptych-single line-mask">
+                    <img class="animate-text-up" loading="lazy" src="anh.png" alt="Our Memories">
+                </div>
+
+                <div class="line-mask">
+                    <h2 class="memories-title-script animate-text-up stagger-2">Our Memories</h2>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="photo-wrapper"><img loading="lazy" src="anh.png" class="gallery-img" alt="Art 1"></div>
+                <div class="photo-wrapper"><img loading="lazy" src="anh.png" class="gallery-img" alt="Art 2"></div>
+                <div class="photo-wrapper"><img loading="lazy" src="anh.png" class="gallery-img" alt="Art 3"></div>
+                <div class="photo-wrapper"><img loading="lazy" src="anh.png" class="gallery-img" alt="Art 4"></div>
+                <div class="photo-wrapper"><img loading="lazy" src="anh.png" class="gallery-img" alt="Art 5"></div>
+                <div class="photo-wrapper"><img loading="lazy" src="anh.png" class="gallery-img" alt="Art 6"></div>
+                <div class="photo-wrapper"><img loading="lazy" src="anh.png" class="gallery-img" alt="Art 7"></div>
+                <div class="photo-wrapper"><img loading="lazy" src="anh.png" class="gallery-img" alt="Art 8"></div>
+                <div class="photo-wrapper"><img loading="lazy" src="anh.png" class="gallery-img" alt="Art 9"></div>
+                <div class="photo-wrapper"><img loading="lazy" src="anh.png" class="gallery-img" alt="Art 10"></div>
+                <div class="photo-wrapper"><img loading="lazy" src="anh.png" class="gallery-img" alt="Art 11"></div>
+                <div class="photo-wrapper"><img loading="lazy" src="anh.png" class="gallery-img" alt="Art 12"></div>
+            </div>
+
+            <div class="epilogue reveal-card-3d">
+                <img src="khoi_2.png" alt="Sương mù tâm chấn" class="center-splash-accent">
+                <div class="thank-you-text">Sự hiện diện của bạn là niềm vinh hạnh của hai gia đình chúng tôi.</div>
+                <div class="signature">
+                    Đơn Dương
+                    <span class="signature-amp">&</span>
+                    Hồng Ánh
+                </div>
+                <div class="final-thank-you">Thank You</div>
+            </div>
+    </main>
+
+    <!-- =========================================
+         HỆ THỐNG ÂM THANH (AUDIO ENGINE)
+         ========================================= -->
+    <!-- Thẻ audio ẩn. Thay đường link nhạc MP3 của bạn vào thuộc tính src -->
+    <audio id="wedding-audio" loop>
+        <source src="3894163f6777e04fb382a272792f69d6.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ thẻ audio.
+    </audio>
+
+    <!-- Nút điều khiển âm nhạc góc dưới màn hình -->
+    <button id="music-toggle-btn" class="music-floating-btn paused" aria-label="Phát/Tắt nhạc">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="music-icon icon-play">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="music-icon icon-mute">
+            <path
+                d="M4.27 3L3 4.27l9 9v.28c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4v-1.73l4.73 4.73L20.73 21 22 19.73 4.27 3zM14 7h4V3h-6v5.18l2 2z" />
+        </svg>
+    </button>
+
+    <script>
+
+        // =========================================================
+        // HỆ THẦN KINH 3: BẮN DỮ LIỆU RSVP LÊN GOOGLE SHEETS
+        // =========================================================
+
+        // DÁN LINK GOOGLE APPS SCRIPT CỦA BẠN VÀO GIỮA 2 DẤU NGOẶC KÉP
+        const GAS_URL = "LINK_WEB_APP_CUA_BAN";
+
+        const rsvpForms = document.querySelectorAll('.luxury-rsvp-form');
+
+        // =========================================================
+        // HỆ THẦN KINH UX: XỬ LÝ LOGIC TẮT/MỞ Ô SỐ LƯỢNG KHÁCH
+        // =========================================================
+        rsvpForms.forEach(form => {
+            const attendanceSelect = form.querySelector('.attendance-select');
+            const guestSelect = form.querySelector('.guest-select');
+
+            if (attendanceSelect && guestSelect) {
+                attendanceSelect.addEventListener('change', function () {
+                    if (this.value === 'no') {
+                        guestSelect.disabled = true;
+                        guestSelect.required = false;
+                        guestSelect.value = "";
+                    } else {
+                        guestSelect.disabled = false;
+                        guestSelect.required = true;
+                        if (!guestSelect.value) guestSelect.value = "";
+                    }
+                });
+            }
+        });
+
+        rsvpForms.forEach(form => {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); // Tuyệt đối không cho load lại trang
+
+                const btn = this.querySelector('.btn-submit');
+                const originalText = btn.innerText;
+
+                // UX Tương tác: Báo hiệu hệ thống đang xử lý, khóa nút tránh bấm 2 lần
+                btn.innerText = "ĐANG GỬI...";
+                btn.style.opacity = "0.7";
+                btn.style.pointerEvents = "none";
+
+                const formData = new FormData(this);
+
+                // Giao thức API gửi dữ liệu đi
+                fetch(GAS_URL, {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.result === "success") {
+                            alert("Cảm ơn bạn! Lời chúc đã được gửi gắm thành công.");
+                            this.reset(); // Xóa trắng form cho gọn gàng
+                        } else {
+                            alert("Hệ thống bận: " + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        alert("Đường truyền không ổn định. Vui lòng kiểm tra lại mạng!");
+                    })
+                    .finally(() => {
+                        // Nhả khóa nút bấm, trả về trạng thái ban đầu
+                        btn.innerText = originalText;
+                        btn.style.opacity = "1";
+                        btn.style.pointerEvents = "auto";
+                    });
+            });
+        });
+
+        // =========================================================
+        // HỆ THẦN KINH 1: ENGINE ÁNH SÁNG VÀ BỤI VÀNG (LUXURY AMBIENT)
+        // =========================================================
+
+        // 2. ĐẠO DIỄN CHUỖI ĐIỀU PHỐI THỜI GIAN INTRO & CONTENT
+        document.addEventListener('DOMContentLoaded', () => {
+            const intro = document.getElementById('masterpiece-intro');
+            const cinematicWhisper = document.getElementById('cinematic-whisper');
+            const whisperName = document.getElementById('whisper-name');
+
+            // --- KỊCH BẢN ĐIỆN ẢNH VIP: KIỂM TRA MÃ TOKEN TỪ URL ---
+            const urlParams = new URLSearchParams(window.location.search);
+            // 1. Phục hồi dấu "+" bị trình duyệt nuốt
+            let vipToken = urlParams.get('vip') ? urlParams.get('vip').replace(/ /g, '+') : null;
+
+            if (vipToken) {
+                // 2. Tự động bù đắp dấu "=" bị mất do khách copy thiếu trên Zalo/Messenger
+                while (vipToken.length % 4 !== 0) {
+                    vipToken += '=';
+                }
+            }
+            let isVIP = false;
+
+            if (vipToken) {
+                try {
+                    // Giải mã Base64 sang Tiếng Việt có dấu
+                    const decodedName = new TextDecoder("utf-8").decode(Uint8Array.from(atob(vipToken), c => c.charCodeAt(0)));
+                    if (decodedName) {
+                        isVIP = true;
+                        whisperName.innerText = decodedName;
+
+                        // Điền sẵn tên vào Form RSVP
+                        const rsvpNameInputs = document.querySelectorAll('.luxury-rsvp-form input[name="name"]');
+                        rsvpNameInputs.forEach(input => { input.value = decodedName; });
+                    }
+                } catch (e) {
+                    console.warn("Mã VIP không hợp lệ. Trở về trạng thái mặc định.");
+                }
+            }
+
+            // =========================================================
+            // [HỆ THẦN KINH 1-V2] ĐIỀU PHỐI KỊCH BẢN ĐIỆN ẢNH INTRO V2
+            // =========================================================
+            function wakeUpMasterpieceIntro() {
+                // Đánh thức Vòng hoa xoay
+                intro.classList.add('awake-halo');
+
+                // 500ms sau, Khói khổng lồ chẻ đôi
+                setTimeout(() => {
+                    intro.classList.add('awake-smoke-split');
+
+                    // 800ms sau (lúc khói đang tách ra), tên Dâu Rể mọc lên từ hư vô
+                    setTimeout(() => {
+                        intro.classList.add('awake-text');
+                    }, 800);
+                }, 500);
+            }
+
+            // --- ĐIỀU PHỐI HIỂN THỊ DỰA TRÊN TRẠNG THÁI VIP ---
+            if (isVIP) {
+                cinematicWhisper.style.display = 'flex';
+                setTimeout(() => { cinematicWhisper.classList.add('show'); }, 100);
+                setTimeout(() => {
+                    cinematicWhisper.style.opacity = '0';
+                    setTimeout(() => {
+                        cinematicWhisper.style.display = 'none';
+                        // GỌI HỆ THỐNG INTRO MỚI
+                        wakeUpMasterpieceIntro();
+                    }, 1500);
+                }, 4500);
+            } else {
+                // GỌI HỆ THỐNG INTRO MỚI NGAY LẬP TỨC
+                setTimeout(() => {
+                    wakeUpMasterpieceIntro();
+                }, 500);
+            }
+
+            // =========================================================
+            // XỬ LÝ LỆNH CLICK: SÓNG KHÓI CUỘN TRÀO
+            // =========================================================
+            intro.addEventListener('click', function unlockInvitation() {
+                intro.removeEventListener('click', unlockInvitation);
+                startMusic();
+
+                // Kích hoạt cơn sóng khói lướt từ dưới lên
+                intro.classList.add('intro-sweeping');
+
+                // 500ms sau, khi khói che lấp, lột sạch nền trắng
+                setTimeout(() => {
+                    intro.classList.add('aligned');
+
+                    // Mở khóa nội dung trang web bên dưới
+                    setTimeout(() => {
+                        document.body.classList.add('activated');
+                        document.body.classList.remove('scroll-locked');
+                    }, 500);
+
+                    // Khi khói quét xong và tan đi (2.2s), khai tử màn Intro
+                    setTimeout(() => {
+                        intro.style.display = 'none';
+                    }, 2200);
+                }, 500);
+            });
+
+            // --- RADAR THEO DÕI CUỘN TRANG PHẦN CỨNG (IntersectionObserver) ---
+            const observerOptions = { root: null, threshold: 0.05, rootMargin: "0px 0px -30px 0px" };
+            const globalObserver = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Tự động kích hoạt nhảy dòng chữ bọc lấp bên trong card kính
+                        if (entry.target.classList.contains('reveal-card-3d') || entry.target.classList.contains('family-card-alone')) {
+                            entry.target.querySelectorAll('.animate-text-up').forEach(text => {
+                                text.style.transform = 'translate3d(0, 0, 0)';
+                            });
+                        }
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Quét toàn bộ Khối Card, Mask Ảnh và các đoạn Text
+            const targetElements = document.querySelectorAll('.reveal-card-3d, .family-card-alone, .photo-wrapper, .content-section .reveal-up');
+            targetElements.forEach(el => globalObserver.observe(el));
+
+
+            // --- LOGIC ĐỒNG HỒ ĐẾM NGƯỢC ---
+            const countDownDate = new Date("Aug 22, 2026 17:30:00").getTime();
+            const elDays = document.getElementById('cd-days');
+            const elHours = document.getElementById('cd-hours');
+            const elMins = document.getElementById('cd-mins');
+            const elSecs = document.getElementById('cd-secs');
+
+            const updateTimer = setInterval(function () {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
+
+                if (distance < 0) {
+                    clearInterval(updateTimer);
+                    elDays.innerHTML = "00"; elHours.innerHTML = "00";
+                    elMins.innerHTML = "00"; elSecs.innerHTML = "00";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                elDays.innerHTML = days < 10 ? '0' + days : days;
+                elHours.innerHTML = hours < 10 ? '0' + hours : hours;
+                elMins.innerHTML = minutes < 10 ? '0' + minutes : minutes;
+                elSecs.innerHTML = seconds < 10 ? '0' + seconds : seconds;
+            }, 1000);
+        });
+
+        // --- LOGIC ĐIỀU KHIỂN ÂM NHẠC (PHIÊN BẢN NÂNG CẤP) ---
+        const audioEl = document.getElementById('wedding-audio');
+        const musicBtn = document.getElementById('music-toggle-btn');
+
+        if (musicBtn && audioEl) {
+            musicBtn.addEventListener('click', function (e) {
+                e.preventDefault(); // Ngăn chặn các hành vi mặc định sai lệch
+                if (audioEl.paused) {
+                    audioEl.play();
+                    this.classList.remove('paused');
+                } else {
+                    audioEl.pause();
+                    this.classList.add('paused');
+                }
+            });
+        }
+
+        // Hàm khởi chạy âm nhạc (Được gọi duy nhất 1 lần khi khách bấm nút Mở Thiệp ở Intro)
+        function startMusic() {
+            if (audioEl.paused) {
+                audioEl.play().then(() => {
+                    musicBtn.classList.remove('paused');
+                }).catch(() => {
+                    // Nuốt lỗi (nếu có) một cách âm thầm để không crash hệ thống
+                });
+            }
+        }
+
+        // Khóa vị trí trang ở trên cùng khi vừa load xong, chống lỗi trình duyệt tự cuộn nhớ vị trí cũ
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.addEventListener('load', () => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        });
+
+        // --- HỆ THỐNG ĐIỀU HƯỚNG MỞ HỘP QUÀ TẶNG (QR TABS) ---
+        const giftBtns = document.querySelectorAll('.gift-tab-btn');
+        const qrPanels = document.querySelectorAll('.qr-panel');
+
+        giftBtns.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-qr');
+
+                // Nếu người dùng bấm lại vào chính nút đang mở -> Đóng nó lại
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                    document.getElementById(targetId).classList.remove('active');
+                    return;
+                }
+
+                // Quét và đóng toàn bộ các thẻ đang mở trước đó
+                giftBtns.forEach(b => b.classList.remove('active'));
+                qrPanels.forEach(p => p.classList.remove('active'));
+
+                // Trượt mở thẻ được chọn
+                this.classList.add('active');
+                document.getElementById(targetId).classList.add('active');
+
+                // Mẹo UI nhỏ: Tự động cuộn nhẹ màn hình để QR nằm giữa tầm mắt
+                setTimeout(() => {
+                    this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 300);
+            });
+        });
+
+        // =========================================================
+        // HỆ THẦN KINH 4: KIỂM SOÁT TƯƠNG TÁC POLAROID CHUẨN CẢM ỨNG
+        // =========================================================
+        document.addEventListener('DOMContentLoaded', () => {
+            const polaroidCards = document.querySelectorAll('.polaroid-card');
+
+            polaroidCards.forEach(card => {
+                card.addEventListener('click', function (e) {
+                    e.stopPropagation(); // Phanh gấp! Không cho cú click lan ra ngoài hệ thống
+
+                    // Nhận diện xem ảnh này có đang được bật thẳng không
+                    const isCurrentlyFocused = this.classList.contains('is-focused');
+
+                    // Reset: Quật ngã tất cả các ảnh khác về trạng thái nghiêng ban đầu
+                    polaroidCards.forEach(c => c.classList.remove('is-focused'));
+
+                    // Nếu ảnh đang nghiêng -> Dựng thẳng nó lên. (Nếu nó đã thẳng rồi thì cứ để nó ngã về nghiêng)
+                    if (!isCurrentlyFocused) {
+                        this.classList.add('is-focused');
+                    }
+                });
+            });
+
+            // Radar 1: Khi khách chạm ngón tay ra ngoài vùng ảnh -> Đánh sập toàn bộ ảnh về trạng thái nghiêng
+            document.addEventListener('click', () => {
+                polaroidCards.forEach(c => c.classList.remove('is-focused'));
+            });
+
+            // Radar 2: Khi khách bắt đầu vuốt/lướt màn hình đi chỗ khác -> Ngay lập tức trả ảnh về góc độ gốc
+            document.addEventListener('scroll', () => {
+                polaroidCards.forEach(c => c.classList.remove('is-focused'));
+            }, { passive: true });
+        });
+    </script>
+</body>
+
+</html>

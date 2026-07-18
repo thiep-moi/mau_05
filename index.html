@@ -212,12 +212,10 @@
         }
 
         /* =========================================
-   [ĐỘNG CƠ INTRO V2-FIX] ĐỒNG BỘ KÍCH HOẠT ĐA TẦNG (CẬP NHẬT)
+   [ĐỘNG CƠ INTRO V2-FIX] ĐỒNG BỘ KÍCH HOẠT (SAFARI GPU ACCELERATED)
    ========================================= */
 
-        /* =========================================
-   1. KHÓI CHẺ ĐÔI: KHÓA TRỤC CHỐNG CHỤM 
-   ========================================= */
+        /* 1. KHÓI CHẺ ĐÔI: Bơm lõi 3D để vắt kiệt GPU Safari */
         .intro-smoke-curtain {
             position: absolute;
             top: 50%;
@@ -231,40 +229,44 @@
             mix-blend-mode: normal;
             transition: transform 3s cubic-bezier(0.85, 0, 0.15, 1), opacity 2.5s ease;
             pointer-events: none;
+            /* Lệnh cưỡng chế GPU */
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            will-change: transform, opacity;
         }
 
-        /* THUẬT TOÁN ĐÓNG ĐINH: Giữ nguyên Scale là 1.5 ngay từ đầu, lật ngược khói phải để khớp mí */
+        /* Biến đổi toàn bộ translate thành translate3d(X, Y, Z) */
         .smoke-left {
-            transform: translate(-50%, -50%) scale(1.5);
+            transform: translate3d(-50%, -50%, 0) scale(1.5);
         }
 
         .smoke-right {
-            transform: translate(-50%, -50%) scale(1.5) scaleX(-1);
+            transform: translate3d(-50%, -50%, 0) scale(1.5) scaleX(-1);
         }
 
-        /* KHI CHẺ: Chỉ thay đổi trục ngang (X), tuyệt đối không đổi Scale để triệt tiêu hiệu ứng "chụm" */
         #masterpiece-intro.awake-smoke-split .smoke-left {
-            transform: translate(-150%, -50%) scale(1.5) rotate(-15deg);
+            transform: translate3d(-150%, -50%, 0) scale(1.5) rotate(-15deg);
             opacity: 0;
         }
 
         #masterpiece-intro.awake-smoke-split .smoke-right {
-            transform: translate(50%, -50%) scale(1.5) scaleX(-1) rotate(-15deg);
+            transform: translate3d(50%, -50%, 0) scale(1.5) scaleX(-1) rotate(-15deg);
             opacity: 0;
         }
 
-        /* 2. VÒNG HOA XOAY: Khóa trục tại chỗ */
+        /* 2. VÒNG HOA XOAY */
         .intro-halo-wrapper {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(0.5);
+            transform: translate3d(-50%, -50%, 0) scale(0.5);
             width: 380px;
             height: 380px;
             z-index: 6;
             opacity: 0;
             transition: opacity 2.5s ease, transform 3s var(--ease-masterpiece);
             pointer-events: none;
+            -webkit-transform-style: preserve-3d;
         }
 
         @keyframes spinInPlace {
@@ -286,73 +288,74 @@
 
         #masterpiece-intro.awake-halo .intro-halo-wrapper {
             opacity: 0.6;
-            transform: translate(-50%, -50%) scale(1);
+            transform: translate3d(-50%, -50%, 0) scale(1);
         }
 
-        /* 3. TÊN DÂU RỂ (MA PHỤC) */
+        /* 3. TÊN DÂU RỂ (Tiêm lõi -webkit-filter cho Safari) */
         .homage-text-box {
             position: relative;
             z-index: 10;
             text-align: center;
             opacity: 0;
-            transform: scale(0.95);
+            transform: translate3d(0, 0, 0) scale(0.95);
+            -webkit-filter: blur(10px);
+            /* Đặc trị Safari */
             filter: blur(10px);
             pointer-events: none;
-            transition: opacity 1.5s ease, transform 2s var(--ease-masterpiece), filter 1.5s ease;
+            transition: opacity 1.5s ease, transform 2s var(--ease-masterpiece), filter 1.5s ease, -webkit-filter 1.5s ease;
+            will-change: transform, filter, opacity;
         }
 
         #masterpiece-intro.awake-text .homage-text-box {
             opacity: 1;
-            transform: scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
+            -webkit-filter: blur(0);
             filter: blur(0);
         }
 
-        /* =========================================
-   4. CƠN SÓNG KHÓI QUÉT: ĐÁNH CHÌM XUỐNG ĐÁY VỰC
-   ========================================= */
+        /* 4. CƠN SÓNG KHÓI QUÉT (Ép xung GPU) */
         .intro-smoke-sweep {
             position: absolute;
             left: 50%;
             top: 130vh;
-            /* THUẬT TOÁN SINH TỬ: Đày nó xuống 130% màn hình, bất chấp scale cũng không thể lòi lên được! */
             width: 150vw;
             height: 150vh;
             max-width: none;
             object-fit: cover;
-            transform: translateX(-50%) scale(1.2);
+            transform: translate3d(-50%, 0, 0) scale(1.2);
             z-index: 99;
             opacity: 1;
             mix-blend-mode: normal;
             pointer-events: none;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            will-change: transform;
         }
 
-        /* 5. LỆNH TỬ HÌNH: KHI BẤM NÚT MỞ THIỆP */
+        /* 5. LỆNH TỬ HÌNH KHI BẤM MỞ THIỆP */
         #masterpiece-intro.aligned {
             background: transparent !important;
             transition: background 0.1s;
         }
 
-        /* KHI QUÉT: Lướt êm ái từ cõi âm lên đỉnh trời */
         #masterpiece-intro.intro-sweeping .intro-smoke-sweep {
-            transform: translate(-50%, -200vh) scale(1.5);
+            transform: translate3d(-50%, -200vh, 0) scale(1.5);
             opacity: 0;
             transition: transform 3.5s cubic-bezier(0.23, 1, 0.32, 1), opacity 3s ease;
         }
 
-        /* SỬA LỖI TÊN BAY LỆCH GÓC: Loại bỏ lệnh dịch ngang (-50%) */
         #masterpiece-intro.intro-sweeping .homage-text-box {
             opacity: 0;
-            transform: translateY(-150px) scale(0.8);
-            /* Thuật toán sinh tử: Chỉ bay thẳng lên trên, cấm bay sang ngang */
+            transform: translate3d(0, -150px, 0) scale(0.8);
+            -webkit-filter: blur(5px);
             filter: blur(5px);
             transition: all 1.5s var(--ease-masterpiece);
         }
 
-        /* Vòng hoa bay thẳng lên trên theo chữ */
         #masterpiece-intro.intro-sweeping .intro-halo-wrapper {
             opacity: 0;
-            transform: translate(-50%, -200px) scale(0.8);
-            /* Vòng hoa dùng thẻ absolute nên phải giữ tọa độ -50% để kìm nó ở giữa */
+            transform: translate3d(-50%, -200px, 0) scale(0.8);
+            -webkit-filter: blur(5px);
             filter: blur(5px);
             transition: all 1.5s var(--ease-masterpiece);
         }
@@ -470,18 +473,20 @@
         .cinematic-hero {
             position: relative;
             width: 100vw;
+            height: 100vh;
+            /* Lệnh cứu mạng dự phòng cho các dòng iPhone cũ (Dưới iOS 15) */
             height: 100dvh;
+            /* Động cơ thông minh tự co giãn theo thanh địa chỉ Safari */
             overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            /* Ép lực hấp dẫn kéo toàn bộ Text xuống đáy */
             align-items: center;
             padding-bottom: 10vh;
-            /* Tạo khoảng thở với mép dưới màn hình */
             z-index: 10;
         }
 
+        /* --- LÕI ẢNH NỀN HERO: CHỐNG GIẬT LAG & CHỐNG NHÁY HÌNH TRÊN SAFARI --- */
         .hero-bg-image {
             position: absolute;
             top: 0;
@@ -491,15 +496,25 @@
             object-fit: cover;
             object-position: center center;
             z-index: -2;
-            transform: scale(1.05);
-            /* Chỉ zoom nhẹ để ảnh không bị giật, không làm mờ */
-            transition: transform 2s var(--ease-masterpiece);
-            /* Hủy delay, ảnh sắc nét ngay lập tức */
+
+            /* Tiêm lõi 3D giả lập để mồi Card đồ họa (GPU) */
+            -webkit-transform: translate3d(0, 0, 0) scale(1.05);
+            transform: translate3d(0, 0, 0) scale(1.05);
+
+            /* Lệnh Tử Hình chống nháy màn hình (Flicker) của dòng máy iOS */
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-perspective: 1000;
+            perspective: 1000;
+
+            /* Đồng bộ mượt mà cho mọi trình duyệt */
+            transition: transform 2s var(--ease-masterpiece), -webkit-transform 2s var(--ease-masterpiece);
             will-change: transform;
         }
 
         body.activated .hero-bg-image {
-            transform: scale(1);
+            -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
         }
 
         /* LƯỚI SƯƠNG MÙ BẢO VỆ TYPOGRAPHY */
@@ -1834,6 +1849,11 @@
             object-fit: cover;
             filter: brightness(0.9);
             z-index: 1;
+            /* Chống vỡ nét ảnh nền Timeline trên iPhone */
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
         }
 
         .timeline-wrapper {
@@ -2041,7 +2061,9 @@
             overflow: hidden !important;
             height: 100dvh !important;
             touch-action: none !important;
-            /* Chặn đứng mọi thao tác vuốt trượt trên Mobile */
+            /* LƯỠI DAO ÉP SAFARI IOS PHẢI NGOAN NGOÃN KHÓA CUỘN: Đóng đinh cơ thể vào màn hình */
+            position: fixed !important;
+            width: 100% !important;
         }
 
         /* =========================================
@@ -2199,31 +2221,32 @@
 
         /* 1. KHỐI 2 (khoi_2.png) - ĐIỂM NHẤN TRUNG TÂM NỀN 
    Lưu ý: Ngài hãy bọc nó trong một container có position: relative và overflow: hidden */
+        /* 1. KHỐI 2 (khoi_2.png) - ĐIỂM NHẤN TRUNG TÂM NỀN (SAFARI HARDWARE FIX) */
         .center-splash-accent {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate3d(-50%, -50%, 0);
+            /* Bơm lõi 3D */
             width: 140%;
-            /* Bành trướng bao phủ */
             max-width: 800px;
             z-index: -1;
-            /* Chìm sâu xuống dưới đáy */
             opacity: 0.65;
             mix-blend-mode: multiply;
-            /* Thuật toán tử huyệt: Ép khói ăn vỡ vào vân giấy */
             pointer-events: none;
             animation: splashBreathe 25s ease-in-out infinite alternate;
             will-change: transform;
+            -webkit-transform-style: preserve-3d;
+            /* Áo giáp chống lag Safari */
         }
 
         @keyframes splashBreathe {
             0% {
-                transform: translate(-50%, -50%) scale(1) rotate(0deg);
+                transform: translate3d(-50%, -50%, 0) scale(1) rotate(0deg);
             }
 
             100% {
-                transform: translate(-50%, -50%) scale(1.1) rotate(5deg);
+                transform: translate3d(-50%, -50%, 0) scale(1.1) rotate(5deg);
             }
         }
 
@@ -2339,6 +2362,59 @@
             .floral-wrap-halo {
                 width: 180%;
             }
+
+            /* =========================================
+   [VACCINE IPHONE] BẢO VỆ KHUÔN MẶT DÂU RỂ KHỎI BỊ CẮT XÉN
+   ========================================= */
+            .hero-bg-image {
+                /* Đẩy trọng tâm cắt ảnh lên phía trên 25% (tính từ đỉnh) để luôn lấy trọn khuôn mặt, không bị Safari zoom vào ngực/bụng */
+                object-position: center 25% !important;
+            }
+        }
+
+        /* =========================================
+   [SAFARI FIX] CHỐNG NHÁY VÀ VỠ VIỀN CHO MỌI HÌNH ẢNH
+   ========================================= */
+        img {
+            /* Ép tất cả ảnh trên trang (Polaroid, Gallery) phải render sắc nét, không bị răng cưa viền trên iOS */
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        /* =========================================
+   [ĐỘNG CƠ VẬT LÝ MỚI] TÊN DÂU RỂ XÉ GIÓ TỪ 2 CỰC (SWIPE-IN)
+   ========================================= */
+        .swipe-in-left,
+        .swipe-in-right {
+            opacity: 0;
+            display: block;
+            /* THUẬT TOÁN ĐÓNG ĐINH: Ép mỗi phần tử phải đứng độc lập trên 1 dòng! */
+            width: 100%;
+            /* Đảm bảo nó bung hết chiều ngang để đẩy kẻ khác xuống dưới */
+            will-change: transform, opacity;
+            transition: transform 1.8s cubic-bezier(0.23, 1, 0.32, 1), opacity 1.5s ease;
+            -webkit-transform-style: preserve-3d;
+        }
+
+        /* Trạng thái mai phục: Đày hai cái tên ra hai đầu vô cực (Ngoài mép màn hình) */
+        .swipe-in-left {
+            -webkit-transform: translate3d(-100vw, 0, 0);
+            transform: translate3d(-100vw, 0, 0);
+        }
+
+        .swipe-in-right {
+            -webkit-transform: translate3d(100vw, 0, 0);
+            transform: translate3d(100vw, 0, 0);
+        }
+
+        /* Trạng thái kích hoạt: Khi ngài vuốt chuột tới -> Lập tức giật mạnh về tọa độ trung tâm! */
+        .active .swipe-in-left,
+        .active .swipe-in-right {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
         }
     </style>
 </head>
@@ -2388,7 +2464,7 @@
     <main class="content-section">
 
         <p class="quote-text reveal-card-3d">
-            "Trong phòng trưng bày của cuộc đời, tình yêu của chúng ta là tác phẩm tuyệt mỹ và trọn vẹn nhất."
+            "Nếu cuộc đời là một thước phim, thì khoảnh khắc này chính là khung hình duy nhất ta muốn dừng lại mãi mãi."
         </p>
 
         <div class="polaroid-collision-section reveal-card-3d">
@@ -2401,13 +2477,13 @@
                     <img src="anh.png" alt="Cô dâu Hồng Ánh" class="polaroid-img">
                 </div>
             </div>
-            <!-- CỤM TÊN BỊ XÉ TOẠC RA HAI BÊN ĐÁY -->
+            <!-- CỤM TÊN BỊ XÉ TOẠC RA HAI BÊN ĐÁY (ĐÃ CẤY CẢM BIẾN SWIPE-IN) -->
             <div class="polaroid-titles">
                 <div class="polaroid-names-wrapper">
-                    <!-- Tên Chú Rể (Bên Trái) -->
-                    <div class="line-mask"><span class="animate-text-up stagger-1 polaroid-name">Đơn Dương</span></div>
-                    <!-- Tên Cô Dâu (Bên Phải) -->
-                    <div class="line-mask"><span class="animate-text-up stagger-2 polaroid-name">Hồng Ánh</span></div>
+                    <!-- Tên Chú Rể (Lướt từ Vô cực Trái vào) -->
+                    <div class="polaroid-name swipe-in-left">Đơn Dương</div>
+                    <!-- Tên Cô Dâu (Lướt từ Vô cực Phải vào) -->
+                    <div class="polaroid-name swipe-in-right">Hồng Ánh</div>
                 </div>
             </div>
         </div>
@@ -2429,25 +2505,25 @@
             <div class="line-mask card-title" style="text-align: center; margin-bottom: 2.5rem;"><span
                     class="animate-text-up">Gia đình hai bên</span></div>
             <div class="family-unity-split">
-                <!-- NHÀ TRAI BÊN TRÁI -->
+                <!-- NHÀ TRAI: BAY TOÀN BỘ TỪ BÊN TRÁI VÀO VỚI NHỊP ĐIỆU CHẬM DẦN -->
                 <div class="family-col">
-                    <div class="family-side-title">Nhà Trai</div>
-                    <div class="family-parent">Ông: Đơn Văn X</div>
-                    <div class="family-parent">Bà: Nguyễn Thị Y</div>
-                    <div class="family-child-role">Chú Rể</div>
-                    <div class="family-child-name">Đơn Dương</div>
+                    <div class="family-side-title swipe-in-left">Nhà Trai</div>
+                    <div class="family-parent swipe-in-left stagger-1">Ông: Đơn Văn X</div>
+                    <div class="family-parent swipe-in-left stagger-1">Bà: Nguyễn Thị Y</div>
+                    <div class="family-child-role swipe-in-left stagger-2">Chú Rể</div>
+                    <div class="family-child-name swipe-in-left stagger-3">Đơn Dương</div>
                 </div>
 
                 <!-- TRỤC THÉP CHIA ĐÔI THIÊN HẠ -->
                 <div class="family-divider"></div>
 
-                <!-- NHÀ GÁI BÊN PHẢI -->
+                <!-- NHÀ GÁI: BAY TOÀN BỘ TỪ BÊN PHẢI VÀO ĐỐI XỨNG TUYỆT ĐỐI -->
                 <div class="family-col">
-                    <div class="family-side-title">Nhà Gái</div>
-                    <div class="family-parent">Ông: Nguyễn Văn Bình</div>
-                    <div class="family-parent">Bà: Đỗ Thị Vân</div>
-                    <div class="family-child-role">Cô Dâu</div>
-                    <div class="family-child-name">Hồng Ánh</div>
+                    <div class="family-side-title swipe-in-right">Nhà Gái</div>
+                    <div class="family-parent swipe-in-right stagger-1">Ông: Nguyễn Văn Bình</div>
+                    <div class="family-parent swipe-in-right stagger-1">Bà: Đỗ Thị Vân</div>
+                    <div class="family-child-role swipe-in-right stagger-2">Cô Dâu</div>
+                    <div class="family-child-name swipe-in-right stagger-3">Hồng Ánh</div>
                 </div>
             </div>
         </div>

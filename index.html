@@ -450,8 +450,9 @@
             will-change: transform;
         }
 
+        /* Thuật toán độc lập: Chỉ kích hoạt chữ khi chính cái lồng (line-mask) chứa nó lọt vào radar */
         body.activated .hero .animate-text-up,
-        .active .animate-text-up {
+        .line-mask.active .animate-text-up {
             transform: translate3d(0, 0, 0);
         }
 
@@ -2412,12 +2413,13 @@
             transform: translate3d(100vw, 0, 0);
         }
 
-        /* Trạng thái kích hoạt: Khi ngài vuốt chuột tới -> Lập tức giật mạnh về tọa độ trung tâm! */
         .active .swipe-in-left,
-        .active .swipe-in-right {
-            opacity: 1;
-            -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+        .active .swipe-in-right,
+        .swipe-in-left.active,
+        .swipe-in-right.active {
+            opacity: 1 !important;
+            -webkit-transform: translate3d(0, 0, 0) !important;
+            transform: translate3d(0, 0, 0) !important;
         }
 
         /* =========================================
@@ -2495,8 +2497,8 @@
         <!-- CỤM TYPOGRAPHY NEO ĐÁY MÀN HÌNH CHUẨN ĐIỆN ẢNH -->
         <div class="hero-bottom-text">
             <div class="line-mask"><span class="animate-text-up script-save-date">Save the date</span></div>
-            <div class="line-mask"><span class="animate-text-up stagger-1 modern-couple-name">Tên Chú Rể & HỒNG
-                    ÁNH</span></div>
+            <div class="line-mask"><span class="animate-text-up stagger-1 modern-couple-name">Tên Chú Rể & Tên Cô
+                    Dâu</span></div>
             <div class="line-mask"><span class="animate-text-up stagger-2 modern-date">22 . 08 . 2026</span></div>
         </div>
     </header>
@@ -3175,24 +3177,30 @@
             });
 
             // --- RADAR THEO DÕI CUỘN TRANG PHẦN CỨNG (IntersectionObserver) ---
-            const observerOptions = { root: null, threshold: 0.05, rootMargin: "0px 0px -30px 0px" };
+            const observerOptions = {
+                root: null,
+                threshold: 0, /* Phá bỏ giới hạn tỷ lệ, giải phóng cho các khối khổng lồ của ngài */
+                rootMargin: "0px 0px -25% 0px" /* Máy chém 25%: Ép mọi mảnh vỡ phải trồi sâu vào màn hình mới được nổ hiệu ứng */
+            };
+
             const globalObserver = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
-                        // Tự động kích hoạt nhảy dòng chữ bọc lấp bên trong card kính
-                        if (entry.target.classList.contains('reveal-card-3d') || entry.target.classList.contains('family-card-alone')) {
-                            entry.target.querySelectorAll('.animate-text-up').forEach(text => {
-                                text.style.transform = 'translate3d(0, 0, 0)';
-                            });
-                        }
-                        obs.unobserve(entry.target);
+                        obs.unobserve(entry.target); /* Rút lui tĩnh lặng. Trả lại quyền sinh sát nghệ thuật cho CSS */
                     }
                 });
             }, observerOptions);
 
-            // Quét toàn bộ Khối Card, Mask Ảnh và các đoạn Text
-            const targetElements = document.querySelectorAll('.reveal-card-3d, .family-card-alone, .photo-wrapper, .content-section .reveal-up');
+            // BẮN TỈA TỌA ĐỘ KÉP: Quét từng thành phần nhỏ nhất thay vì ôm trọn cả khối cha một cách lười biếng
+            const targetElements = document.querySelectorAll(`
+  .reveal-card-3d, 
+  .photo-wrapper, 
+  .line-mask, 
+  .swipe-in-left, 
+  .swipe-in-right, 
+  .tl-row
+`);
             targetElements.forEach(el => globalObserver.observe(el));
 
 

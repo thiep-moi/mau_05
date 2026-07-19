@@ -486,7 +486,7 @@
             z-index: 10;
         }
 
-        /* --- LÕI ẢNH NỀN HERO: CHỐNG GIẬT LAG & CHỐNG NHÁY HÌNH TRÊN SAFARI --- */
+        /* --- LÕI ẢNH NỀN HERO: ÉP XUNG ĐỘ SẮC NÉT & CHỐNG VỠ ẢNH --- */
         .hero-bg-image {
             position: absolute;
             top: 0;
@@ -497,19 +497,23 @@
             object-position: center center;
             z-index: -2;
 
-            /* Tiêm lõi 3D giả lập để mồi Card đồ họa (GPU) */
             -webkit-transform: translate3d(0, 0, 0) scale(1.05);
             transform: translate3d(0, 0, 0) scale(1.05);
 
-            /* Lệnh Tử Hình chống nháy màn hình (Flicker) của dòng máy iOS */
+            /* Áo giáp chống nháy hình của Safari */
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
             -webkit-perspective: 1000;
             perspective: 1000;
 
-            /* Đồng bộ mượt mà cho mọi trình duyệt */
+            /* THUẬT TOÁN TỬ HUYỆT: ÉP TRÌNH DUYỆT RENDER ẢNH CHẤT LƯỢNG CAO NHẤT */
+            image-rendering: -webkit-optimize-contrast;
+            /* Bóp nghẹt thuật toán làm mờ của Webkit, ép tăng độ tương phản pixel */
+            image-rendering: high-quality;
+            /* Cấm trình duyệt nén ảnh khi load */
+
             transition: transform 2s var(--ease-masterpiece), -webkit-transform 2s var(--ease-masterpiece);
-            will-change: transform;
+            /* LƯỠI DAO ĐÃ CẮT BỎ: Tuyệt đối không dùng "will-change: transform" để tránh trình duyệt tạo bản sao chất lượng thấp! */
         }
 
         body.activated .hero-bg-image {

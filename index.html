@@ -2436,18 +2436,15 @@
             touch-action: manipulation;
         }
 
-        /* 3. Phân quyền GPU: Bọc thép cho các phần tử chính */
+        /* 3. Phân quyền GPU: Bọc thép cho các phần tử chính (ĐÃ THA BỔNG CHO KHÓI INTRO) */
         .hero-bg-image,
         .polaroid-card,
-        .trio-item,
-        .intro-smoke-curtain,
-        .intro-smoke-sweep {
+        .trio-item {
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
             -webkit-perspective: 1000;
             perspective: 1000;
             -webkit-transform: translateZ(0);
-            /* Ép đẩy vào lớp GPU */
             transform: translateZ(0);
         }
 

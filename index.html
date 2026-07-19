@@ -2419,6 +2419,46 @@
             -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
         }
+
+        /* =========================================
+   [HỆ THỐNG TỐI THƯỢNG] ÉP XUNG 60FPS TOÀN DIỆN
+   ========================================= */
+
+        /* 1. Ép trình duyệt không được làm mờ/nhòe viền khi chuyển động */
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* 2. Loại bỏ độ trễ khi chạm (cho Safari/Mobile) */
+        html {
+            touch-action: manipulation;
+        }
+
+        /* 3. Phân quyền GPU: Bọc thép cho các phần tử chính */
+        .hero-bg-image,
+        .polaroid-card,
+        .trio-item,
+        .intro-smoke-curtain,
+        .intro-smoke-sweep {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-perspective: 1000;
+            perspective: 1000;
+            -webkit-transform: translateZ(0);
+            /* Ép đẩy vào lớp GPU */
+            transform: translateZ(0);
+        }
+
+        /* 4. Tối ưu ảnh: Không để trình duyệt tự làm nhòe khi co giãn */
+        img {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: high-quality;
+            display: block;
+            /* Ép ảnh thành khối để tránh khoảng trống trắng dưới đáy */
+            max-width: 100%;
+        }
     </style>
 </head>
 
